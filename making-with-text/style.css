@@ -1,9 +1,5 @@
 html {
   box-sizing: border-box;
-  width: 210mm;
-  /* Set HTML width to A4 width */
-  height: 297mm;
-  /* Set HTML height to A4 height */
 }
 *,
 *:before,
@@ -67,7 +63,6 @@ p {
 /* header */
 .header {
   display: grid;
-  width: 210mm;
   grid-template-areas:
     "leftside  rightside";
 
@@ -137,7 +132,6 @@ p {
 
 .container {
   display: grid;
-  width: 190mm;
   grid-template-areas:
     "side1  main1 rside1";
   grid-template-rows: auto;
