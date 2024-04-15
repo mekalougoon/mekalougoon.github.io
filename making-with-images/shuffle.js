@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Three arrays of classes to choose from
-    const firstSet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'];
+    const firstSet = ['a', 'b', 'c'];
     const secondSet = ['x', 'y', 'z'];
     const thirdSet = ['one', 'two', 'three'];
     const allSets = firstSet.concat(secondSet, thirdSet); // Combine all sets for easier removal
@@ -28,6 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Set an interval to add a combination of random classes to all matching divs every 4 seconds
-    setInterval(addRandomClasses, 4000);
+    // Set an interval to add a combination of random classes to all matching divs every 2 seconds
+    setInterval(addRandomClasses, 3000);
 });

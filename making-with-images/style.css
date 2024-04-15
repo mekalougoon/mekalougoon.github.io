@@ -1,4 +1,6 @@
 html {
+  
+  background: #faf0d8;
   box-sizing: border-box;
 }
 *,
@@ -8,41 +10,32 @@ html {
 }
 
 
-/* container for the demographic words */
 
-.container {
-  display: grid;
-  width: 190mm;
-  grid-template-areas:
-    "side1  main1 rside1";
-  grid-template-rows: auto;
-  grid-template-columns: 25% 2fr 2fr;
-  margin: 30px;
-  margin-top: 40px;
-  background: #000000;
-  padding: 10px;
-  overflow: hidden;
-}
-
-/* demographics column styling */
-
-.column1 {
-  grid-area: side1;
-  padding: 10px;
-  background: black;
-  text-align: center;
-
-}
-
-.col {
-  display: inline-block;
-  padding: 0px 10px;
-  margin-bottom: 17px;
-}
-
+/* boxes styling */
 .layout {
+  margin: 5% 0%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mainbox {
+  width: 80%;
+  height: 95vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 25px;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.box, .box.arrow {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+
 }
 
 .box img {
@@ -51,7 +44,7 @@ html {
   object-fit: cover;
 }
 
-/* size changes for the images on the phone*/
+/* size changes for the images
 .box.a {
   width: 10%;
   height: 10%;
@@ -61,25 +54,34 @@ html {
   height: 20%;
 }
 .box.c {
-  width: 30%;
-  height: 30%;
-}
-.box.d {
-  width: 40%;
-  height: 40%;
-}
-
-/* changes order for the images on the phone
-.box.one {
-  order: 1;
-}
-.box.two {
-  order: 2;
-}
-.box.three {
-  order: 3;
+  width: 25%;
+  height: 25%;
 }*/
 
+
+/* changes order for the images*/
+.box.one, .box.arrow.one {
+  order: 1;
+}
+.box.two, .box.arrow.two {
+  order: 2;
+}
+.box.three, .box.arrow.three {
+  order: 3;
+}
+
+/* changes orientation for the arrows*/
+
+.box.arrow.x {
+  transform: rotate(90deg);
+}
+.box.arrow.y {
+  transform: rotate(180deg);
+}
+.box.arrow.z {
+  transform: rotate(270deg);
+}
+
 .random {
-  transition: 1s;
+  transition: 2s;
 }
