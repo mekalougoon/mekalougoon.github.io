@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    Meka's Original Homepage
+ <h1> Meka's Original Homepage</h1>
+  <p>Click and slide the blue slider to compare two pieces of text:</p>
+  <div class="container">
+
+
+  <div class="img-comp-container">
+
+    <div class="img-comp-img">
+      <p class="text-alternate">Prototyping</p>
+      <p class="text-alternate">Publication Design</p>
+      <p class="text-alternate">UI / UX</p>
+      <p class="text-alternate">Wireframing</p>
+      <p class="text-alternate">Publication Design</p>
+      <p class="text-alternate">UI / UX</p>
+      <p class="text-alternate">Wireframing</p>
+      <p class="text-alternate">Publication Design</p>
+      <p class="text-alternate">UI / UX</p>
+      <p class="text-alternate">Wireframing</p>
+      <p class="text-alternate">Wireframing</p>
+    </div>
+
+    <div class="img-comp-img img-comp-overlay">
+      <p class="text-original">Full Stack</p>
+      <p class="text-original">Javascript</p>
+      <p class="text-original">C++</p>
+      <p class="text-original">Project Management</p>
+      <p class="text-original">Javascript</p>
+      <p class="text-original">C++</p>
+      <p class="text-original">Project Management</p>
+      <p class="text-original">Javascript</p>
+      <p class="text-original">C++</p>
+      <p class="text-original">Project Management</p>
+      <p class="text-original">Javascript</p>
+    </div>
+    
+    <div class="img-comp-slider" id="mySlider">
+      <div class="slider-text">Designer</div>
+      <div class="slider-divider"></div>
+      <div class="slider-text">Developer</div>
+    </div>
+    
+  </div>
+
+  <script src="slider.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initComparisons(); // Call initComparisons after DOM content is loaded
+    });
+  </script>
+  </div>
 </body>
+
 </html>
