@@ -1,91 +1,119 @@
 html {
-    background: #faf0d8;
-    box-sizing: border-box;
-  }
+  background: #faf0d8;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blanchedalmond;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/*----------------------------- Slider Columns styling -----------------------------*/
+
+.column {
+  width: 25%;
+
+}
+
+.column.two {
+  left: 25%;
+  position: absolute;
+}
+
+.column.three {
+  left: 50%;
+  position: absolute;
+}
+
+.column.four {
+  left: 75%;
+  position: absolute;
+}
+
+.role-comp-container {
+  position: relative;
+  height: 100%;
+  width: 90%;
+  margin: 0;
   
-  body {
-    background-color: blanchedalmond;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .img-comp-container {
-    position: relative;
-    height: 100%;
-    width: 90%;
-    margin: 0;
-    
-  }
-  
-  .img-comp-img {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-  }
-  
-  .text-original,
-  .text-alternate {
-    font-size: 32pt;
-    padding: 20px;
-    margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  
-  .text-alternate {
-    background-color: blue;
-    text-align: left;
-  }
-  
-  .text-original {
-    width: calc(50% - 40px);
-    background-color: red;
-    max-width: 100%;
-    min-width: 0%;
-    text-align: left;
-    
-  }
-  
-  .img-comp-slider {
-    cursor: ew-resize;
-    position: absolute;
-    z-index: 9;
-    width: 120px;
-    left: 49%;
-    height: 1000px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    box-sizing: border-box;
-    background-color: blanchedalmond;
-  }
-  
-  .slider-text {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-size: 30px;
-  }
-  
-  .slider-divider {
-    width: 2px;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-  }
-  
+}
+
+.role-comp-text {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+/*----------------------------- Slider text styling -----------------------------*/
+
+.text-designer,
+.text-developer {
+  font-size: 32pt;
+  padding: 20px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-developer {
+  background-color: blue;
+  text-align: left;
+  overflow: hidden;
+}
+
+.text-designer {
+  width: calc(50% - 40px);
+  background-color: red;
+  max-width: 100%;
+  min-width: 0%;
+  text-align: left;
+  overflow: hidden;
+}
+
+/*----------------------------- Slider styling -----------------------------*/
+
+.role-comp-slider {
+  cursor: ew-resize;
+  position: absolute;
+  z-index: 9;
+  width: 120px;
+  left: 49%;
+  height: 1000px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: blanchedalmond;
+}
+
+.slider-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 30px;
+}
+
+.slider-divider {
+  width: 2px;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+}

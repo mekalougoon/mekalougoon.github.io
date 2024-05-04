@@ -9,55 +9,73 @@
 </head>
 
 <body>
- <h1> Meka's Original Homepage</h1>
-  <p>Click and slide the blue slider to compare two pieces of text:</p>
+  <h1> Meka's Original Homepage</h1>
+
+  <!-- The container for the two different views of designer and developer -->
   <div class="container">
 
+    <div class="role-comp-container">
 
-  <div class="img-comp-container">
+      <!-- Item one - Developer -->
+      <div class="role-comp-text">
+        <div class="text-developer">
+          <!-- Columns of info -->
+          <div class="column one">
+            <p>developer galore</p>
+            <p>developer galore</p>
+            <p>developer galore</p>
+            <p>developer galore</p>
+          </div>
+          <div class="column two">
+            <p>prototyping galore</p>
+          </div>
+          <div class="column three">
+            <p>prototyping galore</p>
+          </div>
+          <div class="column four">
+            <p>prototyping galore</p>
+          </div>
+        </div>
 
-    <div class="img-comp-img">
-      <p class="text-alternate">Prototyping</p>
-      <p class="text-alternate">Publication Design</p>
-      <p class="text-alternate">UI / UX</p>
-      <p class="text-alternate">Wireframing</p>
-      <p class="text-alternate">Publication Design</p>
-      <p class="text-alternate">UI / UX</p>
-      <p class="text-alternate">Wireframing</p>
-      <p class="text-alternate">Publication Design</p>
-      <p class="text-alternate">UI / UX</p>
-      <p class="text-alternate">Wireframing</p>
-      <p class="text-alternate">Wireframing</p>
+      </div>
+
+      <!-- Item two - Designer -->
+      <div class="role-comp-text">
+        <div class="text-designer">
+
+          <!-- Columns of info -->
+          <div class="column one">
+            <p>designing Stack</p>
+            <p>designing galore</p>
+            <p>designing galore</p>
+            <p>designing galore</p>
+          </div>
+          <div class="column two">
+            <p>designing galore</p>
+          </div>
+          <div class="column three">
+            <p>designing galore</p>
+          </div>
+          <div class="column four">
+            <p>designing galore</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="role-comp-slider" id="mySlider">
+        <div class="slider-text">Designer</div>
+        <div class="slider-divider"></div>
+        <div class="slider-text">Developer</div>
+      </div>
+
     </div>
 
-    <div class="img-comp-img img-comp-overlay">
-      <p class="text-original">Full Stack</p>
-      <p class="text-original">Javascript</p>
-      <p class="text-original">C++</p>
-      <p class="text-original">Project Management</p>
-      <p class="text-original">Javascript</p>
-      <p class="text-original">C++</p>
-      <p class="text-original">Project Management</p>
-      <p class="text-original">Javascript</p>
-      <p class="text-original">C++</p>
-      <p class="text-original">Project Management</p>
-      <p class="text-original">Javascript</p>
-    </div>
-    
-    <div class="img-comp-slider" id="mySlider">
-      <div class="slider-text">Designer</div>
-      <div class="slider-divider"></div>
-      <div class="slider-text">Developer</div>
-    </div>
-    
-  </div>
-
-  <script src="slider.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      initComparisons(); // Call initComparisons after DOM content is loaded
-    });
-  </script>
+    <script src="slider.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        initComparisons(); // Call initComparisons after DOM content is loaded
+      });
+    </script>
   </div>
 </body>
 
