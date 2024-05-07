@@ -28,40 +28,6 @@ p {
 
 /*----------------------------- Slider Columns styling -----------------------------*/
 
-.column {
-  width: 25%;
-
-}
-
-.column.two {
-  left: 25%;
-  position: absolute;
-}
-
-.column.three {
-  left: 50%;
-  position: absolute;
-}
-
-.column.four {
-  left: 75%;
-  position: absolute;
-}
-
-.column.two-alt {
-  left: 25%;
-  position: absolute;
-}
-
-.column.three-alt {
-  left: 50%;
-  position: absolute;
-}
-
-.column.four-alt {
-  left: 75%;
-  position: absolute;
-}
 .role-comp-container {
   position: relative;
   height: 100%;
@@ -81,16 +47,16 @@ p {
 
 .text-designer,
 .text-developer {
-  font-size: 32pt;
+  font-size: 24pt;
   padding: 20px;
-  margin: 0;
   overflow: hidden;
-  white-space: nowrap;
-  display: flex;
-  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+
 }
 
 .text-developer {
+  width: 100%;
   background-color: blue;
   text-align: left;
   overflow: hidden;
@@ -104,10 +70,21 @@ p {
   text-align: left;
   overflow: hidden;
   position: relative;
-  table-layout: fixed;
-  column-width: 25%;
 }
 
+.table-developer {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-designer {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.th, .td, .th-developerone, .th-developertwo, .th-developerthree, .th-developerfour, .th-designerone, .th-designertwo, .th-designerthree, .th-designerfour {
+  width: 100%;
+}
 
 
 /*----------------------------- Slider styling -----------------------------*/
