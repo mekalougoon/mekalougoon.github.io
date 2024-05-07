@@ -10,6 +10,10 @@ body {
   padding: 0;
 }
 
+p {
+  font-size: 24px;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -20,6 +24,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 
 /*----------------------------- Slider Columns styling -----------------------------*/
 
@@ -43,6 +48,20 @@ body {
   position: absolute;
 }
 
+.column.two-alt {
+  left: 25%;
+  position: absolute;
+}
+
+.column.three-alt {
+  left: 50%;
+  position: absolute;
+}
+
+.column.four-alt {
+  left: 75%;
+  position: absolute;
+}
 .role-comp-container {
   position: relative;
   height: 100%;
@@ -84,7 +103,12 @@ body {
   min-width: 0%;
   text-align: left;
   overflow: hidden;
+  position: relative;
+  table-layout: fixed;
+  column-width: 25%;
 }
+
+
 
 /*----------------------------- Slider styling -----------------------------*/
 
