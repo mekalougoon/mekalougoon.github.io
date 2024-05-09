@@ -1,117 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/javascript" src="slider.js"></script>
+  <script type="application/javascript" src="scroll.js"></script>
 </head>
 
 <body>
-  <h1> Meka's Original Homepage</h1>
 
-  <!-- The container for the two different views of designer and developer -->
-  <div class="container">
+  <!-- landing page -->
+  <div class="container-fluid intro">
+    <div class="text">
+    <h1 class="name">Meka Lougoon</h1>
+    <h3>Also known as Tameka Lougoon</h3>
+    <div class="contacts">
+      <hr>
+      <p>Email: mekalougoon@gmail.com</p>
+      <p>Linked in: linkedin.com/in/mekalougoon</p>
+      <hr>
+    </div>
+    <h3>A graduate designer and software developer, passionate about bridging the gap between design and technology. I’m a creative and versatile professional, with interest in front-end development and user interactions and experience.</h3>
+  </div>
+</div>
 
-    <div class="role-comp-container">
+  <div class="container-fluid role-comparison">
+    <div class="ba-slider">
 
-      <!-- Item one - Developer -->
-      <div class="role-comp-text">
-        <div class="text-developer">
-          <table class="table-developer">
-            <colgroup>
-              <col class="developerone">
-              <col class="developertwo">
-              <col class="developerthree">
-              <col class="developerfour">
-            </colgroup>
-            <thead>
-            <tr>
-              <th class="th-developerone">DEVELOPER</th>
-              <th class="th-developertwo">DEVELOPER</th>
-              <th class="th-developerthree">DEVELOPER</th>
-              <th class="th-developerfour">DEVELOPER</th>
-            </tr>
-          </thead>
-            <tr>
-              <td>developing</td>
-              <td>developing</td>
-              <td>developing</td>
-            </tr>
-            <tr>
-              <td>developing</td>
-              <td>developing</td>
-              <td>developing</td>
-            </tr>
-            <tr>
-              <td>developing</td>
-              <td>developing</td>
-              <td>developing</td>
-            </tr>
-          </table>
-        </div>
-
+      <!-- developer page -->
+      <div id="frame-1" class="frame">
+            <table class="table developer">
+              <thead>
+                <tr>
+                  <th>Developer</th>
+                  <th>Developer</th>
+                  <th>Developer</th>
+                  <th>Developer</th>
+                  <th>Developer</th>
+                  <th>Developer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
       </div>
 
+      <!-- designer page -->
+      <div class="resize">
+        <div id="frame-2" class="frame">
+              <table class="table designer">
+                <thead>
+                  <tr>
+                    <th>Designer</th>
+                    <th>Designer</th>
+                    <th>Designer</th>
+                    <th>Designer</th>
+                    <th>Designer</th>
+                    <th>Designer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
 
-     <!-- Item two - Designer -->
-     <div class="text-designer">
-      <table class="table-designer">
-        <colgroup>
-          <col class="designerrone">
-          <col class="designertwo">
-          <col class="designerthree">
-          <col class="designerfour">
-        </colgroup>
-        <thead>
-        <tr>
-          <th class="th-designerone">DESIGNER</th>
-          <th class="th-designertwo">DESIGNER</th>
-          <th class="th-designerthree">DESIGNER</th>
-          <th class="th-designerfour">DESIGNER</th>
-        </tr>
-      </thead>
-          <tr>
-            <td>designing</td>
-            <td>designing</td>
-            <td>designing</td>
-          </tr>
-          <tr>
-            <td>designing</td>
-            <td>designing</td>
-            <td>designing</td>
-          </tr>
-          <tr>
-            <td>designing</td>
-            <td>designing</td>
-            <td>designing</td>
-          </tr>
-          <tr>
-            <td>designing</td>
-            <td>designing</td>
-            <td>designing</td>
-          </tr>
-
-      </table>
-     </div>
-
-      
-      <div class="role-comp-slider" id="mySlider">
+      <div class="handle" id="mySlider">
         <div class="slider-text">Designer</div>
         <div class="slider-divider"></div>
         <div class="slider-text">Developer</div>
       </div>
-
     </div>
-
-    <script src="slider.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        initComparisons(); // Call initComparisons after DOM content is loaded
-      });
-    </script>
   </div>
+  <!-- /container -->
 </body>
 
 </html>

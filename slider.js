@@ -1,73 +1,100 @@
-// Initialises the comparison when DOM is fully loaded
-function initComparison() {
-    // Get the slider and containers
-    var slider = document.getElementById("mySlider");
-    var designerTexts = document.querySelectorAll(".text-designer");
+document.addEventListener('DOMContentLoaded', function() {
+    var sliders = document.querySelectorAll('.ba-slider');
 
-    // Get widths of containers and slider
-    var containerWidth = slider.parentElement.offsetWidth;
-    var sliderWidth = slider.offsetWidth;
+    // loop through each slider and get all frames inside slider
+    sliders.forEach(function(slider) {
+        var frame_1 = slider.querySelector('#frame-1');
+        var frame_2 = slider.querySelector('#frame-2');
 
-    // Check if slider is clicked
-    var clicked = false;
+        // find and set width and height
+        frame_1.style.width = slider.offsetWidth + 'px';
+        frame_2.style.width = slider.offsetWidth + 'px';
+        var max_height = Math.max(frame_1.offsetHeight, frame_2.offsetHeight);
+        slider.style.height = max_height + 'px';
 
-    // Get and set initial position of the slider
-    var initialOffset = (containerWidth - sliderWidth) / 2;
-    slider.style.left = initialOffset + "px";
+        // call drag functionality
+        drags(slider.querySelector('.handle'), slider.querySelector('.resize'), slider);
+    });
 
-    // Event listeners for interactions
-    slider.addEventListener("mousedown", slideReady);
-    window.addEventListener("mouseup", slideFinish);
-    slider.addEventListener("touchstart", slideReady);
-    window.addEventListener("touchend", slideFinish);
-
-    // Function triggered when interaction begins
-    function slideReady(e) {
-        e.preventDefault();
-        clicked = true;
-
-        // Calculate initial offset
-        initialOffset =
-            e.clientX || e.touches[0].clientX - slider.getBoundingClientRect().left;
-
-        // Event listeners for slider movement
-        window.addEventListener("mousemove", slideMove);
-        window.addEventListener("touchmove", slideMove);
-    }
-
-    // Function triggered when interaction ends
-    function slideFinish() {
-        clicked = false;
-    }
-
-    // Function to handle slider movement
-    function slideMove(e) {
-        if (!clicked) return;
-
-        // Calculate current offset
-        var currentOffset =
-            e.clientX || e.touches[0].clientX - slider.getBoundingClientRect().left;
-        var diff = initialOffset - currentOffset;
-
-        // Calculate new position
-        var newPos = Math.min(
-            Math.max(slider.offsetLeft - diff, 0),
-            containerWidth - sliderWidth
-        );
-        slider.style.left = newPos + "px";
-
-        // Calulate ration based on container width and slider size and update containers based on the sliders position
-        var sliderCenter = slider.offsetLeft + sliderWidth / 2;
-        var ratio = sliderCenter / containerWidth;
-        designerTexts.forEach(function (container) {
-            container.style.width = containerWidth * ratio + "px";
+    // listener for drag/resize events
+    window.addEventListener('resize', function() {
+        sliders.forEach(function(slider) {
+            var frame_1 = slider.querySelector('#frame-1');
+            var frame_2 = slider.querySelector('#frame-2');
+            frame_1.style.width = slider.offsetWidth + 'px';
+            frame_2.style.width = slider.offsetWidth + 'px';
+            var max_height = Math.max(frame_1.offsetHeight, frame_2.offsetHeight);
+            slider.style.height = max_height + 'px';
+            drags(slider.querySelector('.handle'), slider.querySelector('.resize'), slider);
         });
+    });
 
-        initialOffset = currentOffset;
+    // handle dragging on mouse or touch
+    function drags(dragElement, resizeElement, container) {
+        dragElement.addEventListener('mousedown', startDrag);
+        dragElement.addEventListener('touchstart', startDrag);
+
+ 
+        function startDrag(e) {
+            dragElement.classList.add('draggable');
+            resizeElement.classList.add('resizable');
+
+            // get initial positions and offsets
+            var startX = e.pageX || e.touches[0].pageX;
+            var dragWidth = dragElement.offsetWidth;
+            var posX = dragElement.offsetLeft + dragWidth - startX;
+            var containerOffset = container.offsetLeft;
+            var containerWidth = container.offsetWidth;
+            var minLeft = containerOffset + 10;
+            var maxLeft = containerOffset + containerWidth - dragWidth - 10;
+
+            // handle drag movement
+            function dragMove(e) {
+                var moveX = e.pageX || e.touches[0].pageX;
+                var leftValue = moveX + posX - dragWidth;
+
+                // keep drag within container
+                if (leftValue < minLeft) {
+                    leftValue = minLeft;
+                } else if (leftValue > maxLeft) {
+                    leftValue = maxLeft;
+                }
+
+                // calculate and set new positions
+                var widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + '%';
+                dragElement.style.left = widthValue;
+                resizeElement.style.width = widthValue;
+            }
+
+            // stop drag
+            function stopDrag() {
+                dragElement.classList.remove('draggable');
+                resizeElement.classList.remove('resizable');
+                document.removeEventListener('mousemove', dragMove);
+                document.removeEventListener('touchmove', dragMove);
+                document.removeEventListener('mouseup', stopDrag);
+                document.removeEventListener('touchend', stopDrag);
+                document.removeEventListener('touchcancel', stopDrag);
+            }
+
+            // listeners for end drag/stop movement
+            document.addEventListener('mousemove', dragMove);
+            document.addEventListener('touchmove', dragMove);
+            document.addEventListener('mouseup', stopDrag);
+            document.addEventListener('touchend', stopDrag);
+            document.addEventListener('touchcancel', stopDrag);
+            e.preventDefault();
+        }
+
+        // stop drag/stop event
+        dragElement.addEventListener('mouseup', stopDrag);
+        dragElement.addEventListener('touchend', stopDrag);
+        dragElement.addEventListener('touchcancel', stopDrag);
+
+
+        function stopDrag() {
+            dragElement.classList.remove('draggable');
+            resizeElement.classList.remove('resizable');
+        }
     }
-}
-
-// Listener for DOM completion
-document.addEventListener("DOMContentLoaded", function () {
-    initComparison();
 });

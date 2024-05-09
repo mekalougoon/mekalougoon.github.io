@@ -1,120 +1,164 @@
-html {
-  background: #faf0d8;
-  box-sizing: border-box;
-}
-
+html,
 body {
-  background-color: blanchedalmond;
+  padding: 0em;
+  margin: 0em;
+  box-sizing: border-box;
   height: 100%;
-  margin: 0;
-  padding: 0;
+  width: 100%;
 }
 
-p {
-  font-size: 24px;
-}
+/* --------------------------- main containers --------------------------- */
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+.intro {
+  padding: 5px;
+  text-align: center;
+  background-color: #dbe9dc;
   width: 100%;
   height: 100%;
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-
-/*----------------------------- Slider Columns styling -----------------------------*/
-
-.role-comp-container {
-  position: relative;
+.role-comparison {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   height: 100%;
-  width: 90%;
-  margin: 0;
+  background-color: rgb(255, 255, 255);
+}
+/* --------------------------- landing page --------------------------- */
+
+.text {
+  padding: 20%;
+
+}
+
+h1.name {
+  padding-bottom: 5%;
+}
+
+.contacts {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/* --------------------------- designer / developer comparison --------------------------- */
+
+/* ----- containers ----- */
+
+.ba-slider {
+  position: relative;
+  overflow: hidden;
+  margin: 2em;
+  height: 100%;
   
 }
 
-.role-comp-text {
+.frame {
+  height: 100%;
+}
+
+.resize {
   position: absolute;
-  width: 100%;
+  top: 0;
+  left: 0;
+  width: 50%;
   overflow: hidden;
-  margin: 0;
+  background-color: white;
 }
 
-/*----------------------------- Slider text styling -----------------------------*/
+/* ----- table styling ----- */
 
-.text-designer,
-.text-developer {
-  font-size: 24pt;
-  padding: 20px;
-  overflow: hidden;
-  margin-right: -15px;
-  margin-left: -15px;
-
+.designer,
+.developer {
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
-.text-developer {
-  width: 100%;
-  background-color: blue;
+.designer {
+  background-color: #dbe9dc;
+  color: #435b4e;
+  
+  border-radius: none !important;
+}
+
+.developer {
+  background-color: #435b4e;
+  color: #dbe9dc;
+}
+
+th, td  {
+  border: none !important;
+}
+
+thead,
+tbody {
+  width: 16%;
   text-align: left;
-  overflow: hidden;
+  font-size: 16pt;
 }
 
-.text-designer {
-  width: calc(50% - 40px);
-  background-color: red;
-  max-width: 100%;
-  min-width: 0%;
-  text-align: left;
-  overflow: hidden;
-  position: relative;
-}
-
-.table-developer {
+.table {
   table-layout: fixed;
   width: 100%;
+  border-spacing: 0px;
 }
 
-.table-designer {
-  table-layout: fixed;
-  width: 100%;
+.table td:nth-child(3),
+.table th:nth-child(3),
+.table td:nth-child(4),
+.table th:nth-child(4) {
+  padding-left: 40px; /* Adjust the padding as needed */
 }
 
-.th, .td, .th-developerone, .th-developertwo, .th-developerthree, .th-developerfour, .th-designerone, .th-designertwo, .th-designerthree, .th-designerfour {
-  width: 100%;
-}
+/* ----- slider styling ----- */
 
-
-/*----------------------------- Slider styling -----------------------------*/
-
-.role-comp-slider {
+.handle {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  margin-left: -10px;
+  background: rgba(255, 255, 255);
   cursor: ew-resize;
+}
+
+.handle:after {
+  z-index: 99;
   position: absolute;
-  z-index: 9;
-  width: 120px;
-  left: 49%;
-  height: 1000px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  box-sizing: border-box;
-  background-color: blanchedalmond;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  margin: -18px 0 0 -8px;
+  content: '\21d4';
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  line-height: 32px;
+  background: #184d27;
+  border: 1px solid #298f48;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.5),
+    inset 0 60px 50px -30px #66ff8c;
+}
+
+.draggable:after {
+  width: 48px;
+  height: 48px;
+  margin: -24px 0 0 -16px;
+  line-height: 48px;
+  font-size: 30px;
 }
 
 .slider-text {
   writing-mode: vertical-rl;
   text-orientation: upright;
   color: rgb(0, 0, 0);
-  text-align: center;
-  font-size: 30px;
+  font-size: 16pt;
 }
 
-.slider-divider {
-  width: 2px;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-}
