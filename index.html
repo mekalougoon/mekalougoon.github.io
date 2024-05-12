@@ -2,11 +2,12 @@
 <html>
 
 <head>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.typekit.net/jgj6avd.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
   <script type="application/javascript" src="slider.js"></script>
-
   <script type="application/javascript" src="scripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
@@ -14,49 +15,117 @@
 </head>
 
 <body>
+  <!-- screen size alert -->
 
-    <!-- landing page -->
-    <div class="container-fluid scroll-snapping" id="intro">
-      <div class="text">
-        <h1 class="name">Meka Lougoon</h1>
-        <p class="other-name">Also known as Tameka Lougoon</p>
-        <span class="typing"></span><span class="typed-cursor"></span>
+  <div id="alert" class="screen-size-alert">
+    <h2>Hi there! <br><br>
+      Thank you for visiting my page. <br><br>
+      I just wanted to let you know this site is best viewed on Desktop or a larger screen.
+      <br>
+      <button class="button" onclick="hide()">
+        Okay!
+      </button>
+    </h2>
+  </div>
 
-        <div class="contacts">
-          <hr>
-          <p><b>Email</b>: mekalougoon@gmail.com <b>| Linked in:</b> linkedin.com/in/mekalougoon</p>
-          <hr>
-        </div>
-        <h3>A graduate designer and software developer, passionate about bridging the gap between design and technology.
-          I’m a creative and versatile professional, with interest in front-end development and user interactions and
-          experience.</h3>
+  <!-- landing page -->
+  <section class="container-fluid scroll-snapping" id="intro">
+    <div class="text">
+      <h1 class="name">Meka Lougoon</h1>
+      <p class="other-name">Also known as Tameka Lougoon</p>
+      <span class="typing"></span><span class="typed-cursor"></span>
+
+      <div class="contacts">
+        <hr>
+        <p><b>Email</b>: mekalougoon@gmail.com <b>| Linked in:</b> linkedin.com/in/mekalougoon</p>
+        <hr>
+      </div>
+      <p class="summary">A graduate designer and software developer, passionate about bridging the gap between design and technology.
+        I’m a creative and versatile professional, with interest in front-end development and user interactions and
+        experience.</p>
+    </div>
+    <h1 class="about-me"><a href="#about" class="about-me">About me...</a></h1>
+  </section>
+
+  <!-- about page -->
+  <section class="container-fluid scroll-snapping" id="about">
+    <div class="about">
+      <h1>... as a person</h1>
+      <div class="about education">
+        <h3 class="about-title">Education</h3>
+        <ul>
+          <li>bachelor</li>
+          <li>major</li>
+          <li>bachelor</li>
+          <li>major</li>
+          <li>minor</li>
+        </ul>
+      </div>
+      <div class="about experience">
+        <h3 class="about-title">Experience</h3>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
       </div>
 
     </div>
+  </section>
 
-    <!-- about page -->
-    <div class="container-fluid scroll-snapping" id="about">
-      <div class="about">
-        <h1 class="about-me"><a href="#about" class="about-me">About me...</h1></a>
-        <h3>As a person</h3>
+  <!-- comparison page -->
+  <section class="container-fluid scroll-snapping" id="role-comparison">
+    <h1>... as a</h1>
+    <div class="ba-slider">
+
+      <!-- developer page -->
+      <div id="frame-1" class="frame">
+        <table class="table developer">
+          <thead>
+            <tr>
+              <th>Developer</th>
+              <th>Developer</th>
+              <th>Developer</th>
+              <th>Developer</th>
+              <th>Developer</th>
+              <th>Developer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
 
-    <!-- comparison page -->
-    <div class="container-fluid scroll-snapping" id="role-comparison">
-      <div class="ba-slider">
-
-        <!-- developer page -->
-        <div id="frame-1" class="frame">
-          <table class="table developer">
+      <!-- designer page -->
+      <div class="resize">
+        <div id="frame-2" class="frame">
+          <table class="table designer">
             <thead>
               <tr>
-                <th>Developer</th>
-                <th>Developer</th>
-                <th>Developer</th>
-                <th>Developer</th>
-                <th>Developer</th>
-                <th>Developer</th>
+                <th>Designer</th>
+                <th>Designer</th>
+                <th>Designer</th>
+                <th>Designer</th>
+                <th>Designer</th>
+                <th>Designer</th>
               </tr>
             </thead>
             <tbody>
@@ -76,70 +145,138 @@
                 <td>3</td>
                 <td>Larry</td>
                 <td>the Bird</td>
-                <td>@twitter</td>
+                <td><img src="images/photoshop.png" alt="photoshop icon" class="comp"></td>
               </tr>
             </tbody>
           </table>
         </div>
+      </div>
 
-        <!-- designer page -->
-        <div class="resize">
-          <div id="frame-2" class="frame">
-            <table class="table designer">
-              <thead>
-                <tr>
-                  <th>Designer</th>
-                  <th>Designer</th>
-                  <th>Designer</th>
-                  <th>Designer</th>
-                  <th>Designer</th>
-                  <th>Designer</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
+      <!-- slider -->
+
+      <div class="handle" id="mySlider">
+        <div class="slider-text">Designer</div>
+        <div class="slider-divider "></div>
+        <div class="slider-text">Developer</div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+  <!-- work page -->
+  <section class="container-fluid scroll-snapping" id="work">
+
+    <div class="work-description">
+      <h3> here is some of my work </h3>
+    </div>
+
+    <div class="work-preview">
+
+      <button class="arrow left" onclick="leftScroll()">
+        <i class="fas fa-angle-double-left"></i>
+        </button>
+
+      <div class="cards">
+        <div class="card active" style="background-image: url(images/img1.jpg);">
+          <div class="card-title">
+            <h3 class="title">Rural Youth Network</h3>
+          </div>
+          <div class="card-desc">
+            <p>here is some of my work and a long desription about it so that you know whether to click or not</p>
           </div>
         </div>
 
-        <!-- slider -->
-
-        <div class="handle" id="mySlider">
-          <div class="slider-text">Designer</div>
-          <div class="slider-divider "></div>
-          <div class="slider-text">Developer</div>
+        <div class="card" style="background-image: url(images/img1.jpg);">
+          <div class="card-title">
+            <h3 class="title">Project two</h3>
+          </div>
+          <div class="card-desc">
+            <p>here is some of my work and a long desription about it so that you know whether to click or not</p>
+          </div>
         </div>
+
+        <div class="card" style="background-image: url(images/img1.jpg);">
+          <div class="card-title">
+            <h3 class="title">Project three</h3>
+          </div>
+          <div class="card-desc">
+            <p>here is some of my work and a long desription about it so that you know whether to click or not</p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url(images/img1.jpg);">
+          <div class="card-title">
+            <h3 class="title">Project four</h3>
+          </div>
+          <div class="card-desc">
+            <p>here is some of my work and a long desription about it so that you know whether to click or not</p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url(images/img1.jpg);">
+          <div class="card-title">
+            <h3 class="title">Project five</h3>
+          </div>
+          <div class="card-desc">
+            <p>here is some of my work and a long desription about it so that you know whether to click or not</p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url(images/img1.jpg);">
+          <div class="card-title">
+            <h3 class="title">Project six</h3>
+          </div>
+          <div class="card-desc">
+            <p>here is some of my work and a long desription about it so that you know whether to click or not</p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url(images/img1.jpg);">
+          <div class="card-title">
+            <h3 class="title">Project seven</h3>
+          </div>
+          <div class="card-desc">
+            <p>here is some of my work and a long desription about it so that you know whether to click or not</p>
+          </div>
+        </div>
+
+                <div class="card" style="background-image: url(images/img1.jpg);">
+          <div class="card-title">
+            <h3 class="title">Project eight</h3>
+          </div>
+          <div class="card-desc">
+            <p>here is some of my work and a long desription about it so that you know whether to click or not</p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url(images/img1.jpg);">
+          <div class="card-title">
+            <h3 class="title">Project nine</h3>
+          </div>
+          <div class="card-desc">
+            <p>here is some of my work and a long desription about it so that you know whether to click or not</p>
+          </div>
+        </div>
+
       </div>
 
+      <button class="arrow right" onclick="rightScroll()">
+        <i class="fas fa-angle-double-right"></i>
+        </button>
+
     </div>
-  </div>
+  </section>
+
 
   <!-- navigation -->
 
   <div class="nav-panel">
     <nav>
-        <a href="#intro">Home</a>
-        <a href="#about">About</a> 
-        <a href="#role-comparison">Roles</a>
-        <a href="#work">Work</a>
+      <a href="#intro" class="nav-a">Home</a>
+      <a href="#about" class="nav-a">About</a>
+      <a href="#role-comparison" class="nav-a">Roles</a>
+      <a href="#work" class="nav-a">Work</a>
     </nav>
 
     <script type="application/javascript" src="scroll.js"></script>

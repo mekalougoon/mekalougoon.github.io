@@ -1,7 +1,7 @@
 html,
 body {
-  padding: 0em;
-  margin: 0em;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   height: 100%;
   width: 100%;
@@ -11,12 +11,16 @@ body {
 }
 /* --------------------------- main containers --------------------------- */
 
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #intro {
-  padding: 5px;
   text-align: center;
   background-color: #dbe9dc;
-  width: 100%;
-  height: 90%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -24,41 +28,47 @@ body {
 }
 
 #about {
-  width: 100%;
-  height: 100%;
-  border-radius: 0 150px 0 0;
+  padding-top: 6%;
   background-color: #435b4e;
   color: #dbe9dc;
 }
 
 #role-comparison {
-  padding-top: 5%;
+  padding-top: 6%;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
   background-color: white;
 }
 
-.container-fluid {
-  height: 100vh;
+#work {
+  padding-top: 5%;
 }
+
 
 /* --------------------------- general fonts and behaviour --------------------------- */
 
 /* importing fonts */
 
 @font-face {
+  font-family: 'zt-shago';
+  src: url('zt-shago.woff')
+}
+
+@font-face {
+  font-family: 'zt-shago-rounded';
+  src: url('zt-shago-rounded.woff')
+}
+
+@font-face {
   font-family: 'super-carbon';
   src: url('super-carbon.woff')
 }
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: light;
- }
  
-a {
+p {
+  font-family: "houschka-rounded";
+}
+
+a.nav-a {
   text-decoration: none;
   color: #435b4e;
   font-weight: bold;
@@ -67,12 +77,48 @@ a {
 }
 
 h1 {
-  font-size: 3rem;;
+  font-size: 3rem;
+  font-family: "zt-shago";
 }
+
+h3 {
+  font-size: 2rem;
+  font-family: "zt-shago";
+}
+
 
 .scroll-snapping {
   scroll-snap-stop: always;
   scroll-snap-align: start;
+}
+
+.screen-size-alert {
+  visibility: hidden;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  color: #435b4e;
+  position: fixed;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  border-radius: 50px 50px 50px 50px;
+  text-align: center;
+  background-color: white;
+  flex-wrap: wrap;
+
+}
+
+.button {
+  padding: 5%;
+  color: #dbe9dc;
+  background-color: #435b4e;
+  border-radius: 50px 50px 50px 50px;
+  border: 0;
+  margin-top: 5%;
 }
 
 /* --------------------------- navigation --------------------------- */
@@ -96,23 +142,22 @@ h1 {
 
   /* glass effect */
   filter: drop-shadow(2px 4px 6px rgb(64, 73, 68));
-  background-color: rgba(255, 255, 255, 0.4); /* Just adjust the color or opacity to make the text pop! */
+  background-color: rgba(255, 255, 255, 0.4);
   box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.625);
 
-  /* add box shadow, hover effects and transition */
-  
 }
 
 /* --------------------------- landing page --------------------------- */
 
+
 .text {
   padding: 15%;
-  font-size: 1rem;
 }
 
 .name {
   padding-bottom: 3%;
-  font-size: 5rem;
+  font-size: 8rem;
+  font-family:"zt-shago";
 }
 
 .typing {
@@ -122,15 +167,28 @@ h1 {
 .contacts {
   margin-top: 5%;
   margin-bottom: 5%;
+  font-weight: 600;
 }
 
 .other-name {
   font-size: 1.5rem;
   padding-bottom: 2%;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: 500;
+
+}
+
+.typing {
+  font-family: "zt-shago";
 }
 
 .typed-cursor {
   font-size: 44px; /* Adjust the size as needed */
+
   opacity: 1;
   animation: blink 0.7s infinite;
 }
@@ -147,18 +205,40 @@ h1 {
   }
 }
 
-/* --------------------------- about page --------------------------- */
-
-h1.about-me {
-  padding: 1.5%;
+.about-me {
+  color: #dbe9dc;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #435b4e;
+  border-radius: 0 150px 0 0;
+  position: absolute;
 }
 
-a.about-me {
-  color: #dbe9dc;
+/* --------------------------- about page --------------------------- */
+
+.about-title {
+  background-color: #dbe9dc;
+  color: #435b4e;
+  border-radius: 0 2em 2em 0;
+  width: 500px;
+  padding: 10px 10px;
+  margin: 0;
+}
+
+.about h1 {
+  text-align: center;
+  padding-bottom: 2.5%;
 }
 
 /* --------------------------- designer / developer comparison --------------------------- */
 
+#role-comparison h1 {
+  text-align: center;
+  padding-bottom: 2.5%;
+}
 
 .ba-slider {
   position: relative;
@@ -222,7 +302,12 @@ tbody {
 .table th:nth-child(3),
 .table td:nth-child(4),
 .table th:nth-child(4) {
-  padding-left: 40px; /* Adjust the padding as needed */
+  padding-left: 40px;
+}
+
+.comp {
+  height: 100px;
+  width: 100px;
 }
 
 /* ----- slider styling ----- */
@@ -272,5 +357,195 @@ tbody {
   text-orientation: upright;
   color: rgb(0, 0, 0);
   font-size: 16pt;
+  font-family: "zt-shago";
+}
+
+/* --------------------------- work page --------------------------- */
+
+.work-preview {
+  position: relative;
+  padding: 0px 30px;
+  margin-top: 100px;
+  height: 100%;
+}
+
+/* ----- arrows ----- */
+
+.arrow {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #1d221d;
+}
+
+.arrow:hover {
+  
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ----- cards----- */
+
+.cards {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  min-height: 100%;
+  padding: 0px 15px;
+  margin: 1px 10px;
+  border: 0;
+  border-radius: 5em 5em 5em 5em;
+  overflow: hidden;
+  transition: min-width 600ms;
+  color: white;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+
+.title {
+  font-size: clamp(38px, 5vh, 48px);
+  color: #000000;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: rotate(-90deg) translateX(-450px);
+}
+
+.card-desc {
+  opacity: 0;
+}
+
+
+/* ----- expanded cards ----- */
+.card.active {
+  min-width: 800px;
+  border-radius: 5em 5em 5em 5em;
+}
+
+.card.active .card-desc {
+  opacity: 1;
+  background-color: red;
+}
+
+.card-title {
+  background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #435b4e 100%);
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}  
+
+.card.active .card-title {
+  all: unset;
+}
+
+.card.active .title {
+  padding-bottom: 0.5em;
+  transform: unset;
+}
+
+/*
+
+.card {
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  max-width: 200px;
+  min-width: 150px;
+  min-height: 500px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  background-color: #dbe9dc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  transition: max-width 0.5s ease-in-out;
+  padding: 25px;
+  padding-top: 100px;
+  
+}
+
+.card-body {
+  background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #435b4e 100%);
+  padding: 4em;
+}
+
+
+/* .title {
+  font-size: clamp(38px, 5vh, 48px);
+  color: #dbe9dc;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0;
+  transform: rotate(-90deg) translateX(-350px);
+} */
+
+/* .card-desc {
+  position: absolute;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: max-height 0.3s ease-in-out;
+}
+
+/* ----- expanded cards ----- */
+
+/* .card.active {
+  max-width: 500px;
+}
+
+.card.active .card-title {
+  all: unset;
+}
+
+.card.active .title {
+  padding-bottom: 0.5em;
+  transform: unset;
+}
+
+.card.active .card-desc {
+  position: relative;
+  opacity: 1;
+  max-height: 100%;
+  transition-delay: 0.3s;
+} */
+
+
+
+/* --------------------------- media query --------------------------- */
+
+@media (max-width: 1000px) {
+  .screen-size-alert {
+    visibility: visible;
+  }
 }
 
