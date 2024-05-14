@@ -1,5 +1,5 @@
 html {
-  transform: scale(0.5); 
+
   transform-origin: 0 0; 
   box-sizing: border-box;
 }
@@ -111,6 +111,8 @@ p {
   height: 2px;
   background: #000;
   margin: 0 30px;
+  max-width: 40%;
+  max-height: 80%;
 }
 
 /* scrolling text bar */
@@ -140,6 +142,8 @@ p {
   grid-template-columns: 25% 2fr 2fr;
   margin: 30px;
   margin-top: 40px;
+  
+  margin-bottom: 40px;
   background: #000000;
   padding: 10px;
 }

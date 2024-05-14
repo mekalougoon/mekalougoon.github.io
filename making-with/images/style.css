@@ -1,6 +1,5 @@
 html {
-  transform: scale(0.5); 
-  transform-origin: 0 0; 
+
   background: #faf0d8;
   box-sizing: border-box;
 }
@@ -14,6 +13,8 @@ html {
 
 /* boxes styling */
 .layout {
+  max-width: 40%;
+  max-height: 80%; 
   margin: 5% 0%;
   display: flex;
   flex-wrap: wrap;
