@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const leftButton = document.querySelector(".left");
   const rightButton = document.querySelector(".right");
   const cards = document.querySelectorAll(".card");
+  const currentCardElement = document.getElementById("current-card");
+  const totalCardsElement = document.getElementById("total-cards");
   let currentIndex = 0;
 
   // function to update active card
@@ -70,12 +72,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // update cards count
+
+  function updateCount() {
+    currentCardElement.textContent = currentIndex + 1;
+    totalCardsElement.textContent = cards.length;
+  }
+
   // event listener for left arrow
   function leftScroll() {
     if (currentIndex > 0) {
       currentIndex--;
       updateActiveCard();
       calculateScrollPosition();
+      updateCount();
     }
   }
 
@@ -85,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       currentIndex++;
       updateActiveCard();
       calculateScrollPosition();
+      updateCount();
     }
   }
 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.nav-panel a', '.about-me a').forEach(anchor => {
+    document.querySelectorAll('.nav-panel a, .about-me a, .scroll-arrows a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
   
