@@ -9,6 +9,11 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  transform: scale(0.3);
+  transform-origin: 0 0;
+}
+
 
 
 /* boxes styling */

@@ -30,6 +30,8 @@ html {
 
 body {
   background: #faf0d8;
+  transform: scale(0.3);
+  transform-origin: 0 0;
 }
 
 h1 {
