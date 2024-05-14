@@ -1,5 +1,6 @@
 html {
-  
+  transform: scale(0.5); 
+  transform-origin: 0 0; 
   background: #faf0d8;
   box-sizing: border-box;
 }

@@ -33,16 +33,19 @@ p {
     background-color: dbe9dc;
     width: 100%;
     height: 100%;
-    justify-content: center;
 
     overflow: hidden;
 }
 
 .website {
-    margin-top: 3%;
+    display: flex;
+    margin-top: 2%;
     height: 100%;
     padding: 0;
-    flex: 1;
+    margin: 0;
+    flex: 2;
+    justify-content: space-around;
+    
 }
 
 
@@ -53,6 +56,11 @@ p {
     font-family: 'zt-shago';
     color: #435b4e;
 
+}
+
+
+.heading {
+    padding-bottom: 3%;
 }
 
 
