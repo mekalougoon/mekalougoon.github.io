@@ -28,20 +28,21 @@ body {
 }
 
 #about {
-  padding-top: 6%;
+  padding-top: 150px;
   background-color: #435b4e;
   color: #dbe9dc;
 }
 
 #role-comparison {
-  padding-top: 6%;
+  padding-top: 150px;
+  padding-bottom: 2%;
   display: flex;
   flex-direction: column;
   background-color: white;
 }
 
 #work {
-  padding-top: 5%;
+  padding-top: 150px;
 }
 
 
@@ -124,10 +125,10 @@ h3 {
 /* --------------------------- navigation --------------------------- */
 
 .nav-panel {
-  top: 3%;
-  width: 20%;
+  top: 40px;
+  width: 500px;
   min-width: fit-content;
-  height: 5%;
+  height: 80px;
   left: 50%;
   transform: translateX(-50%);
   color: #435b4e;
@@ -213,7 +214,7 @@ h3 {
   width: 100%;
   padding: 1rem;
   background-color: #435b4e;
-  border-radius: 0 150px 0 0;
+  border-radius: 150px 150px 0 0;
   position: absolute;
 }
 
@@ -250,10 +251,13 @@ h3 {
 
 .frame {
   height: 100%;
+  width: 100%;
+  padding: 0 2em;
 }
 
 .resize {
   position: absolute;
+  min-width: none;
   top: 0;
   left: 0;
   width: 50%;
@@ -263,16 +267,13 @@ h3 {
 
 /* ----- table styling ----- */
 
-.designer,
-.developer {
-  padding-left: 2%;
-  padding-right: 2%;
+.designer, .developer {
+
 }
 
 .designer {
   background-color: #dbe9dc;
   color: #435b4e;
-  
   border-radius: none !important;
 }
 
@@ -287,7 +288,6 @@ th, td  {
 
 thead,
 tbody {
-  width: 16%;
   text-align: left;
   font-size: 16pt;
 }
@@ -295,32 +295,78 @@ tbody {
 .table {
   table-layout: fixed;
   width: 100%;
-  border-spacing: 0px;
+  border-radius: 2em;
 }
 
-.table td:nth-child(3),
-.table th:nth-child(3),
-.table td:nth-child(4),
-.table th:nth-child(4) {
-  padding-left: 40px;
+.table td:nth-child(5),
+.table th:nth-child(5) {
+  padding-left: 80px;
+}
+
+/* ----- designer columns ----- */
+
+.table.designer td:nth-child(1),
+.table.designer th:nth-child(1),
+.table.designer td:nth-child(2),
+.table.designer th:nth-child(2),
+.table.designer td:nth-child(3),
+.table.designer th:nth-child(3),
+.table.designer td:nth-child(4),
+.table.designer th:nth-child(4),
+.table.designer td:nth-child(5),
+.table.designer th:nth-child(5) {
+  width: 18%;
+}
+
+.table.designer td:nth-child(6),
+.table.designer th:nth-child(6),
+.table.designer td:nth-child(7),
+.table.designer th:nth-child(7) {
+  width: 12%;
+}
+
+/* ----- developer columns ----- */
+
+.table.developer td:nth-child(1),
+.table.developer th:nth-child(1),
+.table.developer td:nth-child(2),
+.table.developer th:nth-child(2) {
+  width: 12%;
+}
+
+.table.developer td:nth-child(3),
+.table.developer th:nth-child(3)
+.table.developer td:nth-child(4),
+.table.developer th:nth-child(4),
+.table.developer td:nth-child(5),
+.table.developer th:nth-child(5),
+.table.developer td:nth-child(5),
+.table.developer th:nth-child(5),
+.table.developer td:nth-child(6),
+.table.developer th:nth-child(6) {
+  width: 18%;
 }
 
 .comp {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
 }
 
 /* ----- slider styling ----- */
 
 .handle {
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
-  left: 50%;
+  left: 46%;
   top: 0;
   bottom: 0;
-  width: 20px;
-  margin-left: -10px;
+  
+  padding: 0 20px 0;
   background: rgba(255, 255, 255);
   cursor: ew-resize;
+  align-items: center;
+  justify-content: center;
 }
 
 .handle:after {
@@ -356,17 +402,25 @@ tbody {
   writing-mode: vertical-rl;
   text-orientation: upright;
   color: rgb(0, 0, 0);
-  font-size: 16pt;
+  font-size: 1.5em;
   font-family: "zt-shago";
+}
+
+.slider-divider {
+  width: 2px;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 /* --------------------------- work page --------------------------- */
 
 .work-preview {
   position: relative;
-  padding: 0px 30px;
-  margin-top: 100px;
-  height: 100%;
+  height: 80%;
+  padding: 0px 60px;
+  margin-top: 2%;
 }
 
 /* ----- arrows ----- */
@@ -403,12 +457,13 @@ tbody {
 .cards {
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  height: 100%;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: hidden;
   overflow-y: hidden;
   scroll-behavior: smooth;
+  
 }
 
 .card {
@@ -417,7 +472,6 @@ tbody {
   align-items: center;
   min-width: 200px;
   min-height: 100%;
-  padding: 0px 15px;
   margin: 1px 10px;
   border: 0;
   border-radius: 5em 5em 5em 5em;
@@ -432,27 +486,19 @@ tbody {
 
 
 .title {
-  font-size: clamp(38px, 5vh, 48px);
+  font-size: 2em;
   color: #000000;
   text-transform: uppercase;
   white-space: nowrap;
-  transform: rotate(-90deg) translateX(-450px);
+  transform-origin: left;
+  transform: rotate(-90deg);
+  left: 50%;
+  bottom: 20px;
+  position: absolute;
 }
 
 .card-desc {
   opacity: 0;
-}
-
-
-/* ----- expanded cards ----- */
-.card.active {
-  min-width: 800px;
-  border-radius: 5em 5em 5em 5em;
-}
-
-.card.active .card-desc {
-  opacity: 1;
-  background-color: red;
 }
 
 .card-title {
@@ -462,84 +508,38 @@ tbody {
   margin: 0;
 }  
 
-.card.active .card-title {
-  all: unset;
-}
-
-.card.active .title {
-  padding-bottom: 0.5em;
-  transform: unset;
-}
-
-/*
-
-.card {
-  align-items: flex-end;
-  justify-content: center;
-  position: relative;
-  max-width: 200px;
-  min-width: 150px;
-  min-height: 500px;
-  overflow: hidden;
-  text-align: center;
-  cursor: pointer;
-  background-color: #dbe9dc;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 25px;
-  transition: max-width 0.5s ease-in-out;
-  padding: 25px;
-  padding-top: 100px;
-  
-}
-
-.card-body {
-  background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #435b4e 100%);
-  padding: 4em;
-}
-
-
-/* .title {
-  font-size: clamp(38px, 5vh, 48px);
-  color: #dbe9dc;
-  text-transform: uppercase;
-  white-space: nowrap;
-  margin: 0;
-  transform: rotate(-90deg) translateX(-350px);
-} */
-
-/* .card-desc {
-  position: absolute;
-  margin: 0;
-  max-height: 0;
-  opacity: 0;
-  transform: max-height 0.3s ease-in-out;
-}
 
 /* ----- expanded cards ----- */
-
-/* .card.active {
-  max-width: 500px;
-}
-
-.card.active .card-title {
-  all: unset;
-}
-
-.card.active .title {
-  padding-bottom: 0.5em;
-  transform: unset;
+.card.active {
+  min-width: 800px;
+  border-radius: 5em 5em 5em 5em;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 .card.active .card-desc {
-  position: relative;
   opacity: 1;
-  max-height: 100%;
-  transition-delay: 0.3s;
-} */
+  background-color: red;
+}
 
+.card.active .card-title {
+  all: unset;
+}
 
+.card.active .title {
+  padding-bottom: 0.5em;
+  transform: unset;
+  bottom: 0;
+  left: 0; /* Align with the left edge of .card-title */
+  position: relative;
+  text-transform: unset;
+  font-size: 3em;
+  white-space: wrap;
+}
 
 /* --------------------------- media query --------------------------- */
 
