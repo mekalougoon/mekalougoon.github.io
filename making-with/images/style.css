@@ -1,5 +1,5 @@
 html {
-
+  
   background: #faf0d8;
   box-sizing: border-box;
 }
@@ -9,17 +9,10 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  transform: scale(0.3);
-  transform-origin: 0 0;
-}
-
 
 
 /* boxes styling */
 .layout {
-  max-width: 40%;
-  max-height: 80%; 
   margin: 5% 0%;
   display: flex;
   flex-wrap: wrap;
