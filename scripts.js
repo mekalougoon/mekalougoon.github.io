@@ -43,34 +43,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".card");
   let currentIndex = 0;
 
-  // Function to update active card
+  // function to update active card
   function updateActiveCard() {
     cards.forEach(card => card.classList.remove("active"));
     cards[currentIndex].classList.add("active");
   }
 
-  // Calculate scroll position to keep active card centered and fully visible
+  // calculate scroll position to keep active card centered and fully visible
   function calculateScrollPosition() {
     const containerWidth = cardContainer.offsetWidth;
     const activeCardWidth = cards[currentIndex].offsetWidth;
     const scrollLeft = cards[currentIndex].offsetLeft;
-    const halfContainerWidth = containerWidth / 2;
+    const thirdContainerWidth = containerWidth / 3;
     const halfActiveCardWidth = activeCardWidth / 2;
     
     if (scrollLeft < cardContainer.scrollLeft + halfActiveCardWidth) {
       cardContainer.scrollTo({
-        left: scrollLeft - halfContainerWidth + halfActiveCardWidth,
+        left: scrollLeft - thirdContainerWidth + halfActiveCardWidth,
         behavior: "smooth"
       });
     } else if (scrollLeft + activeCardWidth > cardContainer.scrollLeft + containerWidth - halfActiveCardWidth) {
       cardContainer.scrollTo({
-        left: scrollLeft + activeCardWidth - containerWidth + halfContainerWidth,
+        left: scrollLeft + activeCardWidth - containerWidth + thirdContainerWidth,
         behavior: "smooth"
       });
     }
   }
 
-  // Event listener for left arrow
+  // event listener for left arrow
   function leftScroll() {
     if (currentIndex > 0) {
       currentIndex--;
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Event listener for right arrow
+  // cvent listener for right arrow
   function rightScroll() {
     if (currentIndex < cards.length - 1) {
       currentIndex++;
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
   leftButton.addEventListener("click", leftScroll);
   rightButton.addEventListener("click", rightScroll);
 
-  // Initialize active card and scroll position
+  // initialize active card and scroll position
   updateActiveCard();
   calculateScrollPosition();
 });
