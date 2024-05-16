@@ -41,7 +41,7 @@ body {
   padding-bottom: 2%;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: 	#fff2e1;
 }
 
 #work {
@@ -79,15 +79,26 @@ a.nav-a {
 h1 {
   font-size: 3em;
   font-family: "zt-shago";
-  color: #435b4e;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: em;
   font-family: "zt-shago";
   color: #435b4e;
 }
 
+.card-desc h4{
+  font-size: 1.5em;
+  font-weight: 600;
+  font-family: 'zt-shago';
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: 500;
+  font-family: 'zt-shago';
+  padding-bottom:0.5em;
+}
 
 .scroll-snapping {
   scroll-snap-stop: always;
@@ -108,7 +119,7 @@ h3 {
   padding: 5%;
   border-radius: 50px 50px 50px 50px;
   text-align: center;
-  background-color: white;
+  background-color: 	#fff2e1;
   flex-wrap: wrap;
 
 }
@@ -173,7 +184,7 @@ animation: bounce 4s infinite;
   /* glass effect */
   filter: drop-shadow(2px 4px 6px rgb(64, 73, 68));
   background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.625);
+  box-shadow: inset 0 0 0 100px rgba(255,242,225, 1);
 
 }
 
@@ -302,6 +313,7 @@ color: #435b4e;
   background-color: #dbe9dc;
   height: 100%;
   width: 100%;
+  margin-bottom: 50px;
   margin-right: 50px;
   border-radius: 50em 50em 2em 2em;
 }
@@ -345,7 +357,7 @@ color: #435b4e;
   left: 0;
   width: 50%;
   overflow: hidden;
-  background-color: white;
+  background-color: 	#fff2e1;
 }
 
 /* ----- table styling ----- */
@@ -443,7 +455,7 @@ tbody {
   bottom: 0;
   
   padding: 0 20px 0;
-  background: rgba(255, 255, 255);
+  background: 	#fff2e1;
   cursor: ew-resize;
   align-items: center;
   justify-content: center;
@@ -457,7 +469,7 @@ tbody {
   height: 32px;
   margin: -18px 0 0 -8px;
   content: '\21d4';
-  color: white;
+  color: 	#fff2e1;
   font-weight: bold;
   font-size: 26px;
   text-align: center;
@@ -559,7 +571,8 @@ tbody {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 150px;
+  width: 175px;
+  min-width: 175px;
   min-height: 100%;
   margin: 0 10px;
   padding: 0 50px 0 50px;
@@ -567,7 +580,7 @@ tbody {
   border-radius: 5em 5em 5em 5em;
   overflow: hidden;
   transition: min-width 600ms;
-  color: white;
+  color: 	#fff2e1;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -576,14 +589,26 @@ tbody {
 
 
 .title {
-  font-size: 2em;
-  color: #ffffff;
+  font-size: 1.75em;
+  color: 	#fff2e1;
   text-transform: uppercase;
   white-space: nowrap;
   transform-origin: left;
   transform: rotate(-90deg);
-  left: 50%;
-  bottom: 20px;
+  left: 40%;
+  bottom: 5px;
+  position: absolute;
+}
+
+.category-date {
+  font-family: "houschka-rounded";
+  font-size: 1.25em;
+  color: 	#fff2e1;
+  white-space: nowrap;
+  transform-origin: left;
+  transform: rotate(-90deg);
+  left: 60%;
+  bottom: 10px;
   position: absolute;
 }
 
@@ -593,7 +618,7 @@ tbody {
 }
 
 .card-title {
-  background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #435b4e 100%);
+  background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #435b4e 70%);
   position: absolute;
   inset: 0;
   margin: 0;
@@ -615,10 +640,10 @@ tbody {
 .card.active .card-desc {
   opacity: 1;
   margin-top: 5px;
-  border-radius: .5em;
+  border-radius: 1em;
   filter: drop-shadow(2px 4px 6px rgb(64, 73, 68));
   background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.176);
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.4);
   color:#435b4e;
   padding: 1em;
 }
@@ -627,8 +652,8 @@ tbody {
   all: unset;
 }
 
-.card.active .title {
-  padding: 0.5em;
+.card.active .title  {
+  padding:  0.5em;
   transform: unset;
   left: 0; /* Align with the left edge of .card-title */
   position: relative;
@@ -640,7 +665,16 @@ tbody {
 
   filter: drop-shadow(2px 4px 6px rgb(64, 73, 68));
   background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.176);
+  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.4);
+}
+
+.card.active .category-date {
+  visibility: hidden;
+}
+
+.card-desc a {
+color: #435b4e;
+text-decoration: underline;
 }
 
 /* --------------------------- media query --------------------------- */

@@ -4,7 +4,6 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100%;
-  width: 100%;
   background-color: #dbe9dc;
   scroll-behavior: smooth;
 }
@@ -16,15 +15,33 @@ body {
 
 h1 {
     font-size: 3em;
+    font-family: 'zt-shago';
+    background-color: #435b4e;
+    color: #dbe9dc;
+    border-radius: 0 2em 2em 0;
+    width: 80%;
+    padding: 10px 50px 10px 50px;
+    margin-top: 40px;
 }
 
 h2 {
     font-size: 1.5em;
+    font-family: 'zt-shago';
+    background-color: #435b4e;
+    color: #dbe9dc;
+    border-radius: 0 2em 2em 0;
+    width: 350px;
+    padding: 10px 0 10px 50px;
+    
+    margin-top: 5%;
 }
 
 p {
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: "houschka-rounded";
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .flexbox {
@@ -34,7 +51,7 @@ p {
     width: 100%;
     height: 100%;
 
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .website {
@@ -43,7 +60,7 @@ p {
     height: 100%;
     padding: 0;
     margin: 0;
-    flex: 2;
+    flex: 1;
     justify-content: space-around;
     
 }
@@ -51,17 +68,10 @@ p {
 
 .info {
     flex: 1;
-    top: 5%;
-    padding-left: 5%;
-    font-family: 'zt-shago';
     color: #435b4e;
 
 }
 
-
-.heading {
-    padding-bottom: 3%;
-}
 
 
 
