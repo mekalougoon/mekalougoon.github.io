@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   height: 100%;
   background-color: #dbe9dc;
+  overflow: hidden;
   
 
 }
@@ -50,6 +51,7 @@ p {
     background-color: #dbe9dc;
     width: 100%;
     height: 100%;
+    overflow-y: auto;
 }
 
 .website {
