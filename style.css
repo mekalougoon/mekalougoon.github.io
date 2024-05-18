@@ -33,7 +33,7 @@ footer {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  padding-top: 60px;
+  padding-top: 0;
 }
 
 #about {
@@ -176,7 +176,7 @@ h5 {
 /* --------------------------- landing page --------------------------- */
 
 .text {
-  padding: 0 10% 0 10%;
+  padding: 0 6% 0 6%;
 }
 
 .name {
@@ -190,8 +190,8 @@ h5 {
 }
 
 .contacts {
-  margin-top: 4%;
-  margin-bottom: 3%;
+  margin-top: 2%;
+  margin-bottom: 1%;
   font-weight: 600;
 }
 
@@ -309,12 +309,13 @@ h5 {
   height: 60%;
   margin: 2em 0 2em 0;
   padding-right: 25px;
+  padding-bottom: 50px;
   text-align: left;
   overflow-y: auto;
 }
 
 .list-item {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .about-title {
@@ -424,7 +425,7 @@ h5 {
   display: flex;
   position: relative;
   overflow: hidden;
-  margin: 2em;
+  margin: 1em;
   height: 100%;
   overflow-y: auto;
   
@@ -452,13 +453,11 @@ h5 {
 .designer {
   background-color: #dbe9dc;
   border-radius: none !important;
-  text-align: left;
 }
 
 .developer {
   background-color: #435b4e;
   color: #dbe9dc;
-  text-align: right;
 }
 
 
@@ -469,6 +468,7 @@ th, td  {
 thead,
 tbody {
   font-size: 1em;
+  font-weight: 600;
 }
 
 
@@ -478,6 +478,7 @@ tbody {
   table-layout: fixed;
   width: 100%;
   border-radius: 2em;
+  text-align: center;
 }
 
 .table.designer td:nth-child(1),
@@ -552,7 +553,7 @@ tbody {
   top: 0;
   bottom: 0;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   background: 	#fff2e1;
   cursor: ew-resize;
   align-items: center;
@@ -673,8 +674,8 @@ tbody {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 175px;
-  min-width: 175px;
+  width: 150px;
+  min-width: 150px;
   min-height: 100%;
   margin: 0 10px;
   padding: 0 50px 0 50px;
