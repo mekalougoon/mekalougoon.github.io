@@ -4,11 +4,19 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100%;
-  width: 100%;
   background-color: #dbe9dc;
   scroll-behavior: smooth;
 }
+
+footer {
+  background-color: #dbe9dc;
+  bottom:0;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1em;
+}
 /* --------------------------- main containers --------------------------- */
+
 
 .container-fluid {
   max-width: 100%;
@@ -300,6 +308,7 @@ h5 {
   width: 100%;
   height: 60%;
   margin: 2em 0 2em 0;
+  padding-right: 25px;
   text-align: left;
   overflow-y: auto;
 }
@@ -432,6 +441,7 @@ h5 {
   top: 0;
   left: 0;
   width: 50%;
+  transform-origin: center;
   overflow: hidden;
   background-color: 	#fff2e1;
 }
@@ -618,6 +628,8 @@ tbody {
   outline: none;
   cursor: pointer;
   color: #435b4e;
+  background-color: #dbe9dc;
+  border-radius: 100%;
 }
 
 
@@ -708,7 +720,7 @@ tbody {
 }
 
 .card-title {
-  background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #435b4e 70%);
+  background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #435b4e 60%);
   position: absolute;
   inset: 0;
   margin: 0;
