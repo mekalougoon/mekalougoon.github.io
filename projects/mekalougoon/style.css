@@ -75,15 +75,19 @@ a {
 }
 
 .image {
+    display: flex;
     max-width: 50%;
     height: 100%;
-    margin:  2% 2% 0 0;
     flex: 1;
+   justify-content: center;
 }
 
-.image.img { 
+.image img { 
+    padding:  2%;
     max-width: 100%;
     object-fit: contain;
+    border-radius: 4em;
+
 }
 
 
@@ -117,6 +121,7 @@ ul {
 
 .col.two {
     flex-grow: 1;
+    
 }
 
 #process {
@@ -150,6 +155,7 @@ td img {
     width: 100%;
     height: auto;
     display: contain;
+    border-radius: 2em;
 }
 td {
     max-height: 90%;

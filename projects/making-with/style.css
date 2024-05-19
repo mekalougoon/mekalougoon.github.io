@@ -76,14 +76,20 @@ a {
 
 .image {
     display: flex;
-    margin-top: 2%;
+    max-width: 50%;
     height: 100%;
-    padding: 0;
-    margin: 0;
     flex: 1;
-    justify-content: space-around;
+   justify-content: center;
+}
+
+.image img { 
+    padding:  2%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 4em;
 
 }
+
 
 
 .info {
@@ -128,10 +134,30 @@ ul {
     color: #dbe9dc;
 }
 
-table {
+table, table li {
     width: 100%;
-    padding: 2em;    font-size: 1em;
+    padding: 2em;
+    font-size: 1em;
     font-weight: 600;
     font-family: "houschka-rounded";
     color: #dbe9dc;
+    table-layout: fixed;
+    border-spacing: 2em;
+
+
+}
+
+td img {
+    width: 100%;
+    height: auto;
+    display: contain;
+    border-radius: 2em;
+
+}
+td {
+    max-height: 90%;
+}
+
+th {
+    font-family: "zt-shago";
 }
