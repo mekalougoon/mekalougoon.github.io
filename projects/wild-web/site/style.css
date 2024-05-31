@@ -1,0 +1,155 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #282828;
+  scroll-behavior: smooth;
+}
+
+/* --------------------------- main containers --------------------------- */
+
+
+.container {
+  min-height: 100%;
+  padding: 0%;
+
+}
+
+#cover {
+  text-align: center;
+  background-color: #282828;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0;
+}
+
+#pages {
+  margin: 80px;
+  display: flex;
+  flex-direction: row;
+  background-color: 	#282828;
+  color: antiquewhite;
+}
+
+
+/* --------------------------- general fonts and behaviour --------------------------- */
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+h4 {
+    text-align: center;
+    color: #fff2e1;
+    font-size: 2em;
+}
+
+/* importing font families*/
+
+@font-face {
+    font-family: 'walbaumfraktur';
+    src: url('dswalbaumfraktur.woff')
+  }
+
+/* --------------------------- cover --------------------------- */
+
+.title {
+    font-size: 8rem;
+    font-weight: 500;
+    color: #fff2e1;
+    padding-bottom: 80px;
+    font-family: 'walbaumfraktur';
+    letter-spacing: 15px;
+  }
+
+.cover-blurb {
+    outline: solid; 
+    border-radius: 30px 30px;
+    
+    margin: 0 200px 0 200px;
+    border-color: antiquewhite;
+    padding: 60px;
+}
+
+/* --------------------------- pages --------------------------- */
+
+.ba-slider {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 60%;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  outline: solid; 
+  border-radius: 30px 30px;
+  border-color: antiquewhite;
+}
+
+.frame {
+  width: 100%;
+  padding: 0 2em;
+}
+
+.resize {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  transform-origin: center;
+  overflow: hidden;
+  background-color: 	#282828;
+}
+
+.side-section {
+    width: 20%;
+    outline: solid; 
+    border-radius: 30px 30px;
+    border-color: antiquewhite;
+    margin:  100px 0 100px 0;
+}
+
+/* ----- table styling ----- */
+
+th, td  {
+  border: none !important;
+}
+
+thead,
+tbody {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+  border-radius: 2em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+
+/* ----- slider styling ----- */
+
+.handle {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 70%;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 40px;
+  background: 	#830707;
+  cursor: ew-resize;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% calc(100% - 40px), 0% 100%, 0% 0%);
+}
+
