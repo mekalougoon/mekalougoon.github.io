@@ -21,33 +21,34 @@ document.addEventListener('DOMContentLoaded', function() {
         dragElement.addEventListener('mousedown', startDrag);
         dragElement.addEventListener('touchstart', startDrag);
 
+
         function startDrag(e) {
             dragElement.classList.add('draggable');
             resizeElement.classList.add('resizable');
 
             // get initial positions and offsets
             var startX = e.pageX || e.touches[0].pageX;
-            var dragWidth = dragElement.offsetWidth;
-            var posX = dragElement.offsetLeft + dragWidth - startX;
+            var containerRect = container.getBoundingClientRect();
+            var containerLeft = containerRect.left;
+            var posX = startX - dragElement.getBoundingClientRect().left;
 
             // handle drag movement
             function dragMove(e) {
                 var moveX = e.pageX || e.touches[0].pageX;
-                var leftValue = moveX + posX - dragWidth;
+                var leftValue = moveX - containerLeft - posX;
 
                 // calculate and set new positions
-                var containerRect = container.getBoundingClientRect();
-                var containerLeft = containerRect.left;
-                var containerRight = containerRect.right;
-                var offset = 0.5; 
-                var widthValue = (leftValue - containerLeft - offset) * 100 / container.offsetWidth + '%';
+                var dragWidth = dragElement.offsetWidth;
+                var containerWidth = container.offsetWidth;
 
                 // keep drag within container
-                if (leftValue < containerLeft) {
-                    widthValue = '0%';
-                } else if (leftValue > containerRight - dragWidth) {
-                    widthValue = (containerRight - containerLeft - dragWidth - offset) * 100 / container.offsetWidth + '%';
+                if (leftValue < 0) {
+                    leftValue = 0;
+                } else if (leftValue > containerWidth - dragWidth) {
+                    leftValue = containerWidth - dragWidth;
                 }
+
+                var widthValue = (leftValue * 100) / containerWidth + '%';
 
                 dragElement.style.left = widthValue;
                 resizeElement.style.width = widthValue;

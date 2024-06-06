@@ -12,7 +12,6 @@ body {
 
 
 .container {
-  min-height: 100%;
   padding: 0%;
 
 }
@@ -25,10 +24,12 @@ body {
   flex-direction: column;
   justify-content: center;
   padding-top: 0;
+  min-height: 100%;
 }
 
 #pages {
   margin: 80px;
+  height: 80%;
   display: flex;
   flex-direction: row;
   background-color: 	#282828;
@@ -46,7 +47,7 @@ h1 {
 h4 {
     text-align: center;
     color: #fff2e1;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 /* importing font families*/
@@ -62,7 +63,8 @@ h4 {
     font-size: 8rem;
     font-weight: 500;
     color: #fff2e1;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
+    margin: 0 200px 0 200px;
     font-family: 'walbaumfraktur';
     letter-spacing: 15px;
   }
@@ -70,7 +72,6 @@ h4 {
 .cover-blurb {
     outline: solid; 
     border-radius: 30px 30px;
-    
     margin: 0 200px 0 200px;
     border-color: antiquewhite;
     padding: 60px;
@@ -83,9 +84,8 @@ h4 {
   position: relative;
   overflow: hidden;
   width: 60%;
-  bottom: 0;
+  min-height: 90%;
   justify-content: center;
-  align-items: center;
   outline: solid; 
   border-radius: 30px 30px;
   border-color: antiquewhite;
@@ -93,17 +93,23 @@ h4 {
 
 .frame {
   width: 100%;
-  padding: 0 2em;
+
+}
+
+.frame-1 {
+  padding-right: 2em;
 }
 
 .resize {
   position: absolute;
   top: 0;
   left: 0;
-  width: 70%;
+  width: 100%;
   transform-origin: center;
   overflow: hidden;
   background-color: 	#282828;
+  
+
 }
 
 .side-section {
@@ -111,7 +117,15 @@ h4 {
     outline: solid; 
     border-radius: 30px 30px;
     border-color: antiquewhite;
-    margin:  100px 0 100px 0;
+    margin: 100px 0 100px 0;
+
+}
+
+.side-section.right {
+  font-family: 'walbaumfraktur';
+  letter-spacing: 5px;
+  font-size: 1.25em;
+  text-align: center;
 }
 
 /* ----- table styling ----- */
@@ -122,16 +136,16 @@ th, td  {
 
 thead,
 tbody {
-  font-size: 2em;
-  font-weight: 600;
+  font-size: 1.25em;
+  font-weight: 500;
 }
 
 .table {
   table-layout: fixed;
   width: 100%;
   border-radius: 2em;
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 10em;
+  padding-right: 10em;
 }
 
 
@@ -153,3 +167,21 @@ tbody {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% calc(100% - 40px), 0% 100%, 0% 0%);
 }
 
+img.journal {
+width: 60%;
+background-size:cover;
+}
+
+img.seal {
+height: 200px;
+width: 200px;
+background-size: contain;
+margin-top: 20%;
+margin-bottom: 20%;
+border-radius: 100%;
+
+}
+
+.table tr:nth-child(1) {
+  text-align: center;
+}
