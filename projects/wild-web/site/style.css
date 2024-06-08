@@ -1,46 +1,35 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
   height: 100%;
   background-color: #1E1E1E;
-  scroll-behavior: smooth;
 }
 
 /* --------------------------- main containers --------------------------- */
 
-
-.container {
-  padding: 0%;
-
-}
-
-#cover, #backcover {
-  text-align: center;
-  background-color: #1E1E1E;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
+#cover,
+#backcover {
   padding-top: 0;
   min-height: 100%;
-  background-image: url(back-cover.png);
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
 }
 
 #pages {
   margin: 80px;
   height: 80%;
-  display: flex;
-  flex-direction: row;
-  background-color: 	#1E1E1E;
-  color: antiquewhite;
 }
 
+/* --------------------------- colours --------------------------- */
 
-/* --------------------------- general fonts and behaviour --------------------------- */
+.greybackground {
+  background-color: #1E1E1E;
+}
+
+.imagebackground {
+  background-image: url(back-cover.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+
+/* --------------------------- fonts --------------------------- */
 
 /* importing font families*/
 
@@ -51,19 +40,15 @@ body {
 
 h1 {
   font-size: 3em;
-  text-align: center;
 }
 
 h2 {
-  color: antiquewhite;
   font-size: 2em;
   font-family: 'walbaumfraktur';
   letter-spacing: 5px;
 }
 
 h4 {
-  text-align: center;
-  color: antiquewhite;
   font-size: 1.5em;
 
 }
@@ -72,29 +57,52 @@ p {
   font-size: 1.25em;
 }
 
+td p {
+  font-size: 1em;
+}
+
 .backtitle {
   padding: 2% 10%;
-  align-self: center;
+}
+
+.antiquewhite {
+  color: antiquewhite;
+}
+
+/* --------------------------- layout --------------------------- */
+
+.center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flexcolumn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
 }
 
 /* --------------------------- cover --------------------------- */
 
 .title {
-    font-size: 8rem;
-    font-weight: 500;
-    color: antiquewhite;
-    padding-bottom: 100px;
-    margin: 0 200px 0 200px;
-    font-family: 'walbaumfraktur';
-    letter-spacing: 15px;
-  }
+  font-size: 8rem;
+  font-weight: 500;
+  padding-bottom: 100px;
+  margin: 0 200px 0 200px;
+  font-family: 'walbaumfraktur';
+  letter-spacing: 15px;
+}
 
 .cover-blurb {
-
-    border-radius: 30px 30px;
-    margin: 0 200px 0 200px;
-    border-color: antiquewhite;
-    padding: 60px;
+  border-radius: 30px 30px;
+  margin: 0 200px 0 200px;
+  padding: 60px;
 }
 
 /* --------------------------- pages --------------------------- */
@@ -106,17 +114,13 @@ p {
   width: 60%;
   max-height: 100%;
   justify-content: center;
-  outline: solid; 
+  outline: solid;
   border-radius: 30px 30px;
-  border-color: antiquewhite;
 }
 
-.frame {
-  width: 100%;
 
-}
 
-.frame-1 {
+.frame-one {
   padding-right: 2em;
 }
 
@@ -127,17 +131,16 @@ p {
   width: 100%;
   transform-origin: center;
   overflow: hidden;
-  background-color: 	#1E1E1E;
-  
+  background-color: #1E1E1E;
+
 
 }
 
 .side-section {
-    width: 20%;
-    outline: solid; 
-    border-radius: 30px 30px;
-    border-color: antiquewhite;
-    margin: 100px 0 100px 0;
+  width: 20%;
+  outline: solid;
+  border-radius: 30px 30px;
+  margin: 100px 0 100px 0;
 
 }
 
@@ -145,30 +148,25 @@ p {
   font-family: 'walbaumfraktur';
   letter-spacing: 5px;
   font-size: 1.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .side-section.left {
   padding: 0 2em;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  
+
 }
 
 .side-section.left h2 {
-margin-bottom: 0px; 
-margin-top: 25px;
+  margin-bottom: 0px;
+  margin-top: 25px;
 }
 
 
 
 /* ----- table styling ----- */
 
-th, td  {
+th,
+td {
   border: none;
 }
 
@@ -198,17 +196,15 @@ tbody {
   bottom: 50px;
   text-align: center;
   padding: 40px;
-  background: 	#830707;
+  background: #830707;
   cursor: ew-resize;
-  align-items: center;
-  justify-content: center;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% calc(100% - 40px), 0% 100%, 0% 0%);
 }
 
 img.journal {
-width: 100%;
-background-size:cover;
-border-radius: 2em;
+  width: 100%;
+  background-size: cover;
+  border-radius: 2em;
 }
 
 img.journal:hover {
@@ -216,10 +212,10 @@ img.journal:hover {
 }
 
 img.seal {
-
   height: 200px;
   width: 200px;
   background-size: contain;
+  object-fit: cover;
   margin-top: 20%;
   margin-bottom: 20%;
   border-radius: 100%;
@@ -227,17 +223,19 @@ img.seal {
 
 
 .seal,
-.side-section.left p, .side-section.right h2, .journal {
+.side-section.left p,
+.side-section.right h2,
+.journal {
   display: none;
 }
 
 .seal.one,
-.side-section.left p.one, .side-section.right h2.one, .journal.one {
+.side-section.left p.one,
+.side-section.right h2.one,
+.journal.one {
   display: block;
 }
 
 .table tr:nth-child(1) {
   text-align: center;
 }
-
-

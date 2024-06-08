@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // loop through each slider and get all frames inside slider
     sliders.forEach(function(slider) {
-        var frame_1 = slider.querySelector('#frame-1');
-        var frame_2 = slider.querySelector('#frame-2');
+        var frame_1 = slider.querySelector('#frame-one');
+        var frame_2 = slider.querySelector('#frame-two');
 
         // find and set width and height
         frame_1.style.width = slider.offsetWidth + 'px';
