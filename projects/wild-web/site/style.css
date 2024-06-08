@@ -4,7 +4,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100%;
-  background-color: #282828;
+  background-color: #1E1E1E;
   scroll-behavior: smooth;
 }
 
@@ -16,15 +16,18 @@ body {
 
 }
 
-#cover {
+#cover, #backcover {
   text-align: center;
-  background-color: #282828;
+  background-color: #1E1E1E;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   padding-top: 0;
   min-height: 100%;
+  background-image: url(back-cover.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
 }
 
 #pages {
@@ -32,37 +35,54 @@ body {
   height: 80%;
   display: flex;
   flex-direction: row;
-  background-color: 	#282828;
+  background-color: 	#1E1E1E;
   color: antiquewhite;
 }
 
 
 /* --------------------------- general fonts and behaviour --------------------------- */
 
+/* importing font families*/
+
+@font-face {
+  font-family: 'walbaumfraktur';
+  src: url('dswalbaumfraktur.woff')
+}
+
 h1 {
   font-size: 3em;
   text-align: center;
 }
 
-h4 {
-    text-align: center;
-    color: #fff2e1;
-    font-size: 1.5em;
+h2 {
+  color: antiquewhite;
+  font-size: 2em;
+  font-family: 'walbaumfraktur';
+  letter-spacing: 5px;
 }
 
-/* importing font families*/
+h4 {
+  text-align: center;
+  color: antiquewhite;
+  font-size: 1.5em;
 
-@font-face {
-    font-family: 'walbaumfraktur';
-    src: url('dswalbaumfraktur.woff')
-  }
+}
+
+p {
+  font-size: 1.25em;
+}
+
+.backtitle {
+  padding: 2% 10%;
+  align-self: center;
+}
 
 /* --------------------------- cover --------------------------- */
 
 .title {
     font-size: 8rem;
     font-weight: 500;
-    color: #fff2e1;
+    color: antiquewhite;
     padding-bottom: 100px;
     margin: 0 200px 0 200px;
     font-family: 'walbaumfraktur';
@@ -70,7 +90,7 @@ h4 {
   }
 
 .cover-blurb {
-    outline: solid; 
+
     border-radius: 30px 30px;
     margin: 0 200px 0 200px;
     border-color: antiquewhite;
@@ -82,9 +102,9 @@ h4 {
 .ba-slider {
   display: flex;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
   width: 60%;
-  min-height: 90%;
+  max-height: 100%;
   justify-content: center;
   outline: solid; 
   border-radius: 30px 30px;
@@ -107,7 +127,7 @@ h4 {
   width: 100%;
   transform-origin: center;
   overflow: hidden;
-  background-color: 	#282828;
+  background-color: 	#1E1E1E;
   
 
 }
@@ -124,14 +144,32 @@ h4 {
 .side-section.right {
   font-family: 'walbaumfraktur';
   letter-spacing: 5px;
-  font-size: 1.25em;
-  text-align: center;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.side-section.left {
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.side-section.left h2 {
+margin-bottom: 0px; 
+margin-top: 25px;
+}
+
+
 
 /* ----- table styling ----- */
 
 th, td  {
-  border: none !important;
+  border: none;
 }
 
 thead,
@@ -144,8 +182,8 @@ tbody {
   table-layout: fixed;
   width: 100%;
   border-radius: 2em;
-  padding-left: 10em;
-  padding-right: 10em;
+  padding-left: 8em;
+  padding-right: 8em;
 }
 
 
@@ -155,9 +193,9 @@ tbody {
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  left: 70%;
+  left: 89.5%;
   top: 0;
-  bottom: 0;
+  bottom: 50px;
   text-align: center;
   padding: 40px;
   background: 	#830707;
@@ -168,20 +206,38 @@ tbody {
 }
 
 img.journal {
-width: 60%;
+width: 100%;
 background-size:cover;
+border-radius: 2em;
+}
+
+img.journal:hover {
+  filter: invert(100%);
 }
 
 img.seal {
-height: 200px;
-width: 200px;
-background-size: contain;
-margin-top: 20%;
-margin-bottom: 20%;
-border-radius: 100%;
 
+  height: 200px;
+  width: 200px;
+  background-size: contain;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  border-radius: 100%;
+}
+
+
+.seal,
+.side-section.left p, .side-section.right h2, .journal {
+  display: none;
+}
+
+.seal.one,
+.side-section.left p.one, .side-section.right h2.one, .journal.one {
+  display: block;
 }
 
 .table tr:nth-child(1) {
   text-align: center;
 }
+
+
