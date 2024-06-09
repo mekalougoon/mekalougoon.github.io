@@ -1,7 +1,9 @@
-html,
-body {
+html, body {
   height: 100%;
   background-color: #1E1E1E;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* --------------------------- main containers --------------------------- */
@@ -15,6 +17,9 @@ body {
 #pages {
   margin: 80px;
   height: 80%;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Distribute space between children */
+  align-items: stretch; /* Ensure all children take full height */
 }
 
 /* --------------------------- colours --------------------------- */
@@ -31,7 +36,7 @@ body {
 
 /* --------------------------- fonts --------------------------- */
 
-/* importing font families*/
+/* importing font families */
 
 @font-face {
   font-family: 'walbaumfraktur';
@@ -50,11 +55,14 @@ h2 {
 
 h4 {
   font-size: 1.5em;
-
+  font-family: houschka-rounded, sans-serif;
+  font-weight: 300;
 }
 
 p {
-  font-size: 1.25em;
+  font-size: 1.5em;
+  font-family: houschka-rounded, sans-serif;
+  font-weight: 300;
 }
 
 td p {
@@ -62,7 +70,9 @@ td p {
 }
 
 .backtitle {
-  padding: 2% 10%;
+  padding: 2% 25%;
+  font-size: 4rem;
+  font-family: 'walbaumfraktur';
 }
 
 .antiquewhite {
@@ -79,7 +89,6 @@ td p {
 
 .flexcolumn {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
 }
 
@@ -93,7 +102,7 @@ td p {
 .title {
   font-size: 8rem;
   font-weight: 500;
-  padding-bottom: 100px;
+  padding-bottom: 2.5%;
   margin: 0 200px 0 200px;
   font-family: 'walbaumfraktur';
   letter-spacing: 15px;
@@ -101,8 +110,7 @@ td p {
 
 .cover-blurb {
   border-radius: 30px 30px;
-  margin: 0 200px 0 200px;
-  padding: 60px;
+  margin: 0 25% 0 25%;
 }
 
 /* --------------------------- pages --------------------------- */
@@ -111,14 +119,13 @@ td p {
   display: flex;
   position: relative;
   overflow-y: auto;
-  width: 60%;
+  width: 60%; /* Set width for the middle section */
   max-height: 100%;
   justify-content: center;
   outline: solid;
   border-radius: 30px 30px;
+  flex-grow: 1; /* Ensure the slider takes up remaining space */
 }
-
-
 
 .frame-one {
   padding-right: 2em;
@@ -132,16 +139,18 @@ td p {
   transform-origin: center;
   overflow: hidden;
   background-color: #1E1E1E;
-
-
 }
 
 .side-section {
   width: 20%;
   outline: solid;
   border-radius: 30px 30px;
-  margin: 100px 0 100px 0;
-
+  flex: 0 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  height: 80%;
 }
 
 .side-section.right {
@@ -152,16 +161,13 @@ td p {
 
 .side-section.left {
   padding: 0 2em;
-  justify-content: center;
-
+  line-height: 1;
 }
 
 .side-section.left h2 {
   margin-bottom: 0px;
-  margin-top: 25px;
+  margin-top: 5px;
 }
-
-
 
 /* ----- table styling ----- */
 
@@ -183,7 +189,6 @@ tbody {
   padding-left: 8em;
   padding-right: 8em;
 }
-
 
 /* ----- slider styling ----- */
 
@@ -212,15 +217,14 @@ img.journal:hover {
 }
 
 img.seal {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   background-size: contain;
   object-fit: cover;
   margin-top: 20%;
-  margin-bottom: 20%;
+  margin-bottom: 5%;
   border-radius: 100%;
 }
-
 
 .seal,
 .side-section.left p,
