@@ -8,3 +8,47 @@ body {
     height: 100%;
     background-color: #dbe9dc;
 }
+
+.cover {
+    background-color: #3F5D7B;
+}
+
+.width33 {
+    width: 33.33%;
+}
+
+.tabs {
+    margin-bottom: 0;
+    
+}
+
+.tabs.left {
+    margin-left: 5%;
+}
+
+.tabs.orange {
+    background-color: #E97551;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 0 10px;
+}
+
+
+.folder.background {
+    background-color: #E97551;
+    margin: 0 5% 5% 5%;
+    padding: 2%;
+}
+
+.folder.background.left {
+    border-radius: 0 10px 10px 10px;
+}
+
+.folder.inner {
+    background-color: #FAF0D8;
+    padding: 5%;
+}
+
+p {
+    margin: 0;
+    
+}
