@@ -9,13 +9,23 @@ body {
     background-color: #dbe9dc;
 }
 
-.cover {
+.coverblue {
     background-color: #3F5D7B;
 }
 
-.width33 {
-    width: 33.33%;
+.coverorange {
+    background-color: #E97551;
 }
+
+.coveryellow {
+    background-color: #DAB263;
+}
+
+.covergrey {
+    background-color: #4B4B4B;
+}
+
+/* -------------------- TAB DESGIN --------------------- */
 
 .tab {
     margin-bottom: 0;
@@ -24,9 +34,23 @@ body {
     
 }
 
+/* ----- TAB ALLIGNMENT ----- */
+
 .tab.left {
     margin-left: 5%;
 }
+
+.tab.middle {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.tab.right {
+    margin-right: 5%;
+    margin-left: auto;
+}
+
+/* ----- TAB COLOURS ----- */
 
 .tab.orange {
     background-color: #E97551;
@@ -41,23 +65,102 @@ body {
     background-color: #3F5D7B;
 }
 
+/* -------------------- FOLDER DESGIN --------------------- */
 
-.folder.background {
+.folder {
+    
+}
+
+.folder.inner {
+    background-color: #FAF0D8;
+    padding: 5% 0 5% 0;
+    border-radius: 8px;
+}
+
+
+
+
+/* ----- FOLDER COLOURS ----- */
+
+
+.folder.orange {
     background-color: #E97551;
     margin: 0 5% 5% 5%;
     padding: 2%;
 }
 
-.folder.background.left {
-    border-radius: 0 10px 10px 10px;
+.folder.yellow {
+    background-color: #DAB263;
+    margin: 0 5% 5% 5%;
+    padding: 2%;
 }
 
-.folder.inner {
-    background-color: #FAF0D8;
-    padding: 5%;
+.folder.blue {
+    background-color: #3F5D7B;
+    margin: 0 5% 5% 5%;
+    padding: 2%;
 }
 
-p {
+
+
+/* ----- FOLDER ALLIGNMENTS ----- */
+
+.folder.left {
+    border-radius: 0 8px 8px 8px;
+}
+
+.folder.middle {
+    border-radius: 8px;
+}
+
+.folder.right {
+    border-radius: 8px 0 8px 8px;
+}
+
+
+/* -------------------- TEXT DESGIN --------------------- */
+
+/* ----- TEXT STYLING ----- */
+.tab p {
+    margin: 0 0 0 5%;
+}
+
+.normal p {
     margin: 0;
-    
+    padding: 0;
 }
+
+.textleft {
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+.textmiddle {
+    margin-right: auto;
+    margin-left: 38.33%;
+}
+
+.textright {
+    margin-right: 5%;
+    margin-left: auto;
+}
+
+/* ----- TEXT LAYOUTS ----- */
+
+.width30 {
+    width: 30%;
+}
+
+.width33 {
+    width: 33.33%;
+}
+
+.width66 {
+    width: 56.66%;
+}
+
+.width99 {
+    width: 89.99%;
+}
+
+
