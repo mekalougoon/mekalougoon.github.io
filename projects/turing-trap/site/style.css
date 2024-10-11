@@ -175,5 +175,25 @@ body {
 .random.c {
     display: none;
 }
+.random.x {
+    display: none;
+}
+
+.random.y {
+    display: flex;
+}
+.random.z {
+    display: none;
+}
+.random.one {
+    display: none;
+}
+
+.random.two {
+    display: flex;
+}
+.random.three {
+    display: none;
+}
 
 

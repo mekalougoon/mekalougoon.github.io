@@ -5,57 +5,46 @@ document.addEventListener('DOMContentLoaded', function() {
     const firstSet = ['a', 'b', 'c'];
     const secondSet = ['x', 'y', 'z'];
     const thirdSet = ['one', 'two', 'three'];
-    const allSets = firstSet.concat(secondSet, thirdSet); // Combine all sets for easier removal
 
-    // Function to ensure only one class from firstSet is visible at a time
-    function ensureOneVisible(divs) {
-        // Hide all divs with class from firstSet
+    // Function to ensure one random div is visible from a given class set
+    function ensureOneVisible(classSet) {
+        // Select all divs with the relevant classes
+        const divs = Array.from(document.querySelectorAll('.random'));
+
+        // First, hide all divs in the current set
         divs.forEach(div => {
-            firstSet.forEach(cls => div.classList.remove(cls)); // Remove all 'a', 'b', 'c'
-            div.style.display = 'none'; // Hide all divs initially
+            let hasClass = classSet.some(cls => div.classList.contains(cls));
+            if (hasClass) {
+                div.style.display = 'none'; // Hide div if it belongs to the current set
+            }
         });
 
-        // Select one random div to show with a random class from firstSet
-        const randomDiv = divs[Math.floor(Math.random() * divs.length)];
-        const randomClass1 = firstSet[Math.floor(Math.random() * firstSet.length)];
+        // Select one random class from the current class set
+        const randomClass = classSet[Math.floor(Math.random() * classSet.length)];
+        // Get divs that have the randomClass and select one randomly to display
+        const randomDivs = divs.filter(div => div.classList.contains(randomClass));
+        const randomDiv = randomDivs[Math.floor(Math.random() * randomDivs.length)];
 
-        randomDiv.classList.add(randomClass1); // Add one random class from firstSet
-        randomDiv.style.display = 'block'; // Make it visible
+        if (randomDiv) {
+            randomDiv.style.display = 'block'; // Make it visible
+        }
     }
 
-    // Function to add a combination of random classes to each div
+    // Function to ensure one div is visible for each set
     function addRandomClasses() {
-        // Select all divs with class 'random'
-        const divs = document.querySelectorAll('.random');
-
-        // Ensure one visible div from firstSet
-        ensureOneVisible(divs);
-
-        // Apply random classes from secondSet and thirdSet to all divs
-        divs.forEach(div => {
-            // Remove only the classes from the secondSet and thirdSet
-            secondSet.concat(thirdSet).forEach(cls => {
-                if (div.classList.contains(cls)) {
-                    div.classList.remove(cls);
-                }
-            });
-
-            // Generate a random class from secondSet and thirdSet
-            const randomClass2 = secondSet[Math.floor(Math.random() * secondSet.length)];
-            const randomClass3 = thirdSet[Math.floor(Math.random() * thirdSet.length)];
-
-            // Add the randomly selected classes from second and third sets
-            div.classList.add(randomClass2, randomClass3);
-        });
+        // Ensure one visible div from each set (total of 3 visible)
+        ensureOneVisible(firstSet);  // First set (a, b, c)
+        ensureOneVisible(secondSet); // Second set (x, y, z)
+        ensureOneVisible(thirdSet);  // Third set (one, two, three)
     }
 
-    // When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
+    // Scroll to the top of the document when the button is clicked
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
 
-    // Set so this is called when the button is clicked
+    // Attach the functions to the button's click event
     runButton.addEventListener("click", addRandomClasses);
     runButton.addEventListener("click", topFunction);
 });
