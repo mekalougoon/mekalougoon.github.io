@@ -7,6 +7,7 @@ body {
     box-sizing: border-box;
     height: 100%;
     background-color: #dbe9dc;
+    scroll-behavior: smooth;
 }
 
 .coverblue {
@@ -160,6 +161,19 @@ body {
 
 .width99 {
     width: 89.99%;
+}
+
+/* -------------------- RANDOM DESGIN --------------------- */
+
+.random.a {
+    display: none;
+}
+
+.random.b {
+    display: flex;
+}
+.random.c {
+    display: none;
 }
 
 
