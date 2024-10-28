@@ -1,20 +1,23 @@
-/* ----- FONT IMPORTS ----- */
+/* -------------------- FONT IMPORTS --------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
   
 @font-face {
     font-family: 'Telma';
-    src: url('/fonts/Telma-Medium.woff')
+    src: url('Telma-Medium.woff')
   }
   
 @font-face {
     font-family: 'Array';
-    src: url('/fonts/Array-Regular.woff')
+    src: url('Array-Regular.woff')
   }
   
 @font-face {
     font-family: 'Hi';
-    src: url('/fonts/HiRegular-Mmrw.woff')
+    src: url('HiRegular-Mmrw.woff')
   }
+
+/* -------------------- SITE DESGIN --------------------- */
 
 html,
 body {
@@ -24,7 +27,7 @@ body {
     margin: 0%;
     box-sizing: border-box;
     height: 100%;
-    background-color: #dbe9dc;
+    background-color: #4B4B4B;
     scroll-behavior: smooth;
 }
 
@@ -47,9 +50,12 @@ body {
 /* -------------------- TAB DESGIN --------------------- */
 
 .tab {
+    margin-top: -60px; /* Adjust this value as needed for more or less overlap */
     margin-bottom: 0;
     border-radius: 5px 5px 0 0;
-    padding: 10px 10px 0 10px;
+    padding: 30px 10px 0 10px;
+    position: relative;
+    z-index: 1;
 }
 
 /* ----- TAB ALLIGNMENT ----- */
@@ -84,9 +90,17 @@ body {
 }
 
 /* -------------------- FOLDER DESGIN --------------------- */
+.spacer {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 15% 5% 15% 0;
+}
 
-.folder {
-    
+.foldersmall.inner {
+    background-color: #FAF0D8;
+    padding: 5% 0 5% 0;
+    border-radius: 8px;
 }
 
 .folder.inner {
@@ -100,28 +114,36 @@ body {
 
 /* ----- FOLDER COLOURS ----- */
 
+.foldersmall.orange {
+    background-color: #E97551;
+    padding: 2%;
+    margin: 0 5% 0 5%;
+    width: 85%;
+    height: 100%;
+}
 
 .folder.orange {
     background-color: #E97551;
-    margin: 0 5% 0 5%;
     padding: 2%;
 }
 
 .folder.yellow {
     background-color: #DAB263;
-    margin: 0 5% 0 5%;
     padding: 2%;
 }
 
 .folder.blue {
     background-color: #3F5D7B;
-    margin: 0 5% 0 5%;
     padding: 2%;
 }
 
 
 
 /* ----- FOLDER ALLIGNMENTS ----- */
+
+.foldersmall.left {
+    border-radius: 0 8px 8px 8px;
+}
 
 .folder.left {
     border-radius: 0 8px 8px 8px;
@@ -146,32 +168,56 @@ p {
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
+    font-size: 15px;
+    line-height: 15px;
 }
 
-.telma {
+.yeardivider {
+    margin: auto 0 auto 5%;
+    background-color: #4B4B4B;
+
+}
+
+h1.yearnormal {
+    font-family: "Array";
+    font-weight: 50;
+    font-size: 200px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 200px;
+}
+
+h2.telma {
     font-family: "Telma";
     font-size: 300px;
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
-.array {
+h2.array {
     font-family: "Array";
     font-size: 300px;
-    margin-top: 0;
-    margin-bottom: 0;
     font-weight: 50;
+    padding-left: 150px;
 }
 
-.hi {
+h2.hi {
     font-family: "Hi";
     font-size: 300px;
-    margin-top: 0;
-    margin-bottom: 0;
+
 }
 
 .tab p {
-    margin: 0 0 0 5%;
+    margin: auto 0 auto 5%;
+    font-family: "Array";
+    font-weight: 50;
+    font-size: 50px;
+    text-align: center;
 }
 
 .normal p {
@@ -199,10 +245,20 @@ p {
 
 .titletext {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.headertext {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 89.99%;;
+}
+
+.date {
+    width: 89.99%;
 }
 
 /* ----- TEXT LAYOUTS ----- */
@@ -212,16 +268,27 @@ p {
 }
 
 .width33 {
+    margin-top: 100px;
     width: 33.33%;
 }
 
+.width60 {
+    width: 60%;
+}
+
 .width66 {
+    margin-top: 100px;
     width: 56.66%;
 }
 
+
+
 .width99 {
+    margin-top: 100px;
     width: 89.99%;
 }
+
+
 
 /* -------------------- RANDOM DESGIN --------------------- */
 
